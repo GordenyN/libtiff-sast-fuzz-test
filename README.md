@@ -69,8 +69,8 @@ Upstream-исходники находятся в ветке `upstream` внут
 ### 1. Клонировать репозиторий
 
 ```bash
-git clone https://github.com/GordenyN/libtiff-sast-fuzz.git
-cd libtiff-sast-fuzz
+git clone https://github.com/GordenyN/libtiff-sast-fuzz-test.git
+cd libtiff-sast-fuzz-test
 ```
 
 ### 2. Собрать образы
