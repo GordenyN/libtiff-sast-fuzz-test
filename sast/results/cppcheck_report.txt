@@ -1,0 +1,1621 @@
+/analysis/libtiff-src/libtiff/mkspans.c:33:1: portability: Omitted return type of function 'dumparray' defaults to int, this is not supported by ISO C99 and later standards. [returnImplicitInt]
+dumparray(name, runs) char *name;
+^
+/analysis/libtiff-src/libtiff/mkspans.c:54:1: portability: Omitted return type of function 'main' defaults to int, this is not supported by ISO C99 and later standards. [returnImplicitInt]
+main()
+^
+/analysis/libtiff-src/libtiff/mkspans.c:33:29: style: Parameter 'name' can be declared as pointer to const [constParameterPointer]
+dumparray(name, runs) char *name;
+                            ^
+/analysis/libtiff-src/libtiff/mkspans.c:34:15: style: Parameter 'runs' can be declared as const array [constParameter]
+unsigned char runs[256];
+              ^
+/analysis/libtiff-src/libtiff/mkspans.c:37:11: style: Variable 'sep' can be declared as pointer to const [constVariablePointer]
+    char *sep;
+          ^
+/analysis/libtiff-src/libtiff/tiff.h:28:0: information: Include file: "tiffconf.h" not found. [missingInclude]
+#include "tiffconf.h"
+^
+/analysis/libtiff-src/libtiff/tiffio.h:32:0: information: Include file: "tiffvers.h" not found. [missingInclude]
+#include "tiffvers.h"
+^
+/analysis/libtiff-src/libtiff/tiffiop.h:31:0: information: Include file: "tif_config.h" not found. [missingInclude]
+#include "tif_config.h"
+^
+/analysis/libtiff-src/libtiff/tif_aux.c:114:28: error: There is an unknown macro here somewhere. Configuration is required. If TIFF_SSIZE_FORMAT is a macro then please configure it. [unknownMacro]
+                      "(%" TIFF_SSIZE_FORMAT " elements of %" TIFF_SSIZE_FORMAT
+                           ^
+/analysis/libtiff-src/libtiff/tiff.h:79:41: error: syntax error [syntaxError]
+typedef TIFF_MSC_DEPRECATED int8_t int8 TIFF_GCC_DEPRECATED;
+                                        ^
+/analysis/libtiff-src/libtiff/tif_color.c:55:41: style: Parameter 'cielab' can be declared as pointer to const [constParameterPointer]
+void TIFFCIELab16ToXYZ(TIFFCIELabToRGB *cielab, uint32_t l, int32_t a,
+                                        ^
+/analysis/libtiff-src/libtiff/tif_color.c:94:12: style: Variable 'matrix' can be declared as pointer to const [constVariablePointer]
+    float *matrix = &cielab->display.d_mat[0][0];
+           ^
+/analysis/libtiff-src/libtiff/tif_color.c:136:32: style: Parameter 'refWhite' can be declared as pointer to const [constParameterPointer]
+                        float *refWhite)
+                               ^
+/analysis/libtiff-src/libtiff/tif_color.c:251:54: style: Parameter 'luma' can be declared as pointer to const [constParameterPointer]
+int TIFFYCbCrToRGBInit(TIFFYCbCrToRGB *ycbcr, float *luma, float *refBlackWhite)
+                                                     ^
+/analysis/libtiff-src/libtiff/tif_color.c:251:67: style: Parameter 'refBlackWhite' can be declared as pointer to const [constParameterPointer]
+int TIFFYCbCrToRGBInit(TIFFYCbCrToRGB *ycbcr, float *luma, float *refBlackWhite)
+                                                                  ^
+/analysis/libtiff-src/libtiff/tif_dir.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+/analysis/libtiff-src/libtiff/tif_dir.c:1865:53: style: Condition 'poffb<poffa' is always false [knownConditionTrueFalse]
+            if (((uint64_t)poffa != poff) || (poffb < poffa) ||
+                                                    ^
+/analysis/libtiff-src/libtiff/tif_dir.c:1864:19: note: poffb is assigned 'poffa+sizeof(uint16_t)' here.
+            poffb = poffa + sizeof(uint16_t);
+                  ^
+/analysis/libtiff-src/libtiff/tif_dir.c:1865:53: note: Condition 'poffb<poffa' is always false
+            if (((uint64_t)poffa != poff) || (poffb < poffa) ||
+                                                    ^
+/analysis/libtiff-src/libtiff/tif_dir.c:1879:70: style: Condition 'poffd<poffc' is always false [knownConditionTrueFalse]
+            if ((poffc < poffb) || (poffc < dircount * 12) || (poffd < poffc) ||
+                                                                     ^
+/analysis/libtiff-src/libtiff/tif_dir.c:1878:19: note: poffd is assigned 'poffc+sizeof(uint32_t)' here.
+            poffd = poffc + sizeof(uint32_t);
+                  ^
+/analysis/libtiff-src/libtiff/tif_dir.c:1879:70: note: Condition 'poffd<poffc' is always false
+            if ((poffc < poffb) || (poffc < dircount * 12) || (poffd < poffc) ||
+                                                                     ^
+/analysis/libtiff-src/libtiff/tif_dir.c:1535:62: portability: Casting between signed char * and double * which have an incompatible binary data representation. [invalidPointerCast]
+                                    *va_arg(ap, double *) = *(double *)val;
+                                                             ^
+/analysis/libtiff-src/libtiff/tif_dir.c:1541:61: portability: Casting between signed char * and float * which have an incompatible binary data representation. [invalidPointerCast]
+                                    *va_arg(ap, float *) = *(float *)val;
+                                                            ^
+/analysis/libtiff-src/libtiff/tif_dir.c:1558:57: portability: Casting between signed char * and float * which have an incompatible binary data representation. [invalidPointerCast]
+                                *va_arg(ap, float *) = *(float *)val;
+                                                        ^
+/analysis/libtiff-src/libtiff/tif_dir.c:1562:58: portability: Casting between signed char * and double * which have an incompatible binary data representation. [invalidPointerCast]
+                                *va_arg(ap, double *) = *(double *)val;
+                                                         ^
+/analysis/libtiff-src/libtiff/tif_dir.c:1069:19: style: The scope of the variable 'iC2' can be reduced. [variableScope]
+    int iCustom2, iC2;
+                  ^
+/analysis/libtiff-src/libtiff/tif_dir.c:2061:12: style: The scope of the variable 'n' can be reduced. [variableScope]
+    tdir_t n;
+           ^
+/analysis/libtiff-src/libtiff/tif_dir.c:228:11: style: Variable 's' can be declared as pointer to const [constVariablePointer]
+    char *s;
+          ^
+/analysis/libtiff-src/libtiff/tif_dir.c:2223:37: style: Parameter 'tif' can be declared as pointer to const [constParameterPointer]
+uint64_t TIFFCurrentDirOffset(TIFF *tif) { return (tif->tif_diroff); }
+                                    ^
+/analysis/libtiff-src/libtiff/tif_dir.c:2229:29: style: Parameter 'tif' can be declared as pointer to const [constParameterPointer]
+int TIFFLastDirectory(TIFF *tif) { return (tif->tif_nextdiroff == 0); }
+                            ^
+/analysis/libtiff-src/libtiff/tif_dirinfo.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+/analysis/libtiff-src/libtiff/tif_dirinfo.c:513:56: style: inconclusive: Function '_TIFFSetupFields' argument 2 names different: declaration 'infoarray' definition 'fieldarray'. [funcArgNamesDifferent]
+void _TIFFSetupFields(TIFF *tif, const TIFFFieldArray *fieldarray)
+                                                       ^
+/analysis/libtiff-src/libtiff/tif_dir.h:307:67: note: Function '_TIFFSetupFields' argument 2 names different: declaration 'infoarray' definition 'fieldarray'.
+    extern void _TIFFSetupFields(TIFF *tif, const TIFFFieldArray *infoarray);
+                                                                  ^
+/analysis/libtiff-src/libtiff/tif_dirinfo.c:513:56: note: Function '_TIFFSetupFields' argument 2 names different: declaration 'infoarray' definition 'fieldarray'.
+void _TIFFSetupFields(TIFF *tif, const TIFFFieldArray *fieldarray)
+                                                       ^
+/analysis/libtiff-src/libtiff/tif_dirinfo.c:494:66: style: Parameter 'nmemb' can be declared as pointer to const [constParameterPointer]
+static void *td_lfind(const void *key, const void *base, size_t *nmemb,
+                                                                 ^
+/analysis/libtiff-src/libtiff/tif_dirinfo.c:497:21: style: Variable 'end' can be declared as pointer to const [constVariablePointer]
+    char *element, *end;
+                    ^
+/analysis/libtiff-src/libtiff/tif_dirinfo.c:798:16: style: Variable 'pkey' can be declared as pointer to const [constVariablePointer]
+    TIFFField *pkey = &key;
+               ^
+/analysis/libtiff-src/libtiff/tif_dirinfo.c:1247:42: style: Parameter 'tif' can be declared as pointer to const [constParameterPointer]
+int _TIFFCheckFieldIsValidForCodec(TIFF *tif, ttag_t tag)
+                                         ^
+/analysis/libtiff-src/libtiff/tif_dirread.c:37:0: information: Include file: "tiffconf.h" not found. [missingInclude]
+#include "tiffconf.h"
+^
+/analysis/libtiff-src/libtiff/tif_dirread.c:1231:32: error: There is an unknown macro here somewhere. Configuration is required. If TIFF_SSIZE_FORMAT is a macro then please configure it. [unknownMacro]
+                          "(%" TIFF_SSIZE_FORMAT
+                               ^
+/analysis/libtiff-src/libtiff/tif_dirwrite.c:490:1: information: Limiting ValueFlow analysis in function 'TIFFWriteDirectorySec' since it is too complex. Please specify --check-level=exhaustive to perform full analysis. [checkLevelNormal]
+{
+^
+/analysis/libtiff-src/libtiff/tif_dirwrite.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+/analysis/libtiff-src/libtiff/tif_dirwrite.c:2695:14: style: The scope of the variable 'aux' can be reduced. [variableScope]
+    uint64_t aux, bigNum, bigDenom;
+             ^
+/analysis/libtiff-src/libtiff/tif_dirwrite.c:2209:19: style: Variable 'pa' can be declared as pointer to const [constVariablePointer]
+        uint64_t *pa;
+                  ^
+/analysis/libtiff-src/libtiff/tif_dumpmode.c:81:60: error: There is an unknown macro here somewhere. Configuration is required. If TIFF_SSIZE_FORMAT is a macro then please configure it. [unknownMacro]
+                      ", expected a request for at most %" TIFF_SSIZE_FORMAT
+                                                           ^
+/analysis/libtiff-src/libtiff/tif_extension.c:37:20: style: Variable 'td' can be declared as pointer to const [constVariablePointer]
+    TIFFDirectory *td = &tif->tif_dir;
+                   ^
+/analysis/libtiff-src/libtiff/tif_fax3.c:1641:57: error: There is an unknown macro here somewhere. Configuration is required. If TIFF_SSIZE_FORMAT is a macro then please configure it. [unknownMacro]
+                          "Buffer overrun detected : %" TIFF_SSIZE_FORMAT
+                                                        ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+/analysis/libtiff-src/libtiff/tif_getimage.c:735:14: style: The scope of the variable 'col' can be reduced. [variableScope]
+    uint32_t col, row, y, rowstoread;
+             ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:735:27: style: The scope of the variable 'rowstoread' can be reduced. [variableScope]
+    uint32_t col, row, y, rowstoread;
+                          ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:739:13: style: The scope of the variable 'fromskew' can be reduced. [variableScope]
+    int32_t fromskew, toskew;
+            ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:742:14: style: The scope of the variable 'this_tw' can be reduced. [variableScope]
+    uint32_t this_tw, tocol;
+             ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:742:23: style: The scope of the variable 'tocol' can be reduced. [variableScope]
+    uint32_t this_tw, tocol;
+                      ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:743:13: style: The scope of the variable 'this_toskew' can be reduced. [variableScope]
+    int32_t this_toskew, leftmost_toskew;
+            ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:902:14: style: The scope of the variable 'col' can be reduced. [variableScope]
+    uint32_t col, row, y, rowstoread;
+             ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:902:27: style: The scope of the variable 'rowstoread' can be reduced. [variableScope]
+    uint32_t col, row, y, rowstoread;
+                          ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:912:13: style: The scope of the variable 'fromskew' can be reduced. [variableScope]
+    int32_t fromskew, toskew;
+            ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:917:14: style: The scope of the variable 'this_tw' can be reduced. [variableScope]
+    uint32_t this_tw, tocol;
+             ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:917:23: style: The scope of the variable 'tocol' can be reduced. [variableScope]
+    uint32_t this_tw, tocol;
+                      ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:918:13: style: The scope of the variable 'this_toskew' can be reduced. [variableScope]
+    int32_t this_toskew, leftmost_toskew;
+            ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1140:28: style: The scope of the variable 'nrowsub' can be reduced. [variableScope]
+    uint32_t row, y, nrow, nrowsub, rowstoread;
+                           ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1140:37: style: The scope of the variable 'rowstoread' can be reduced. [variableScope]
+    uint32_t row, y, nrow, nrowsub, rowstoread;
+                                    ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1286:28: style: The scope of the variable 'rowstoread' can be reduced. [variableScope]
+    uint32_t row, y, nrow, rowstoread;
+                           ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1289:28: style: The scope of the variable 'offset_row' can be reduced. [variableScope]
+    uint32_t rowsperstrip, offset_row;
+                           ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1850:18: style: The scope of the variable 'r' can be reduced. [variableScope]
+        uint32_t r, g, b, a;
+                 ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1850:21: style: The scope of the variable 'g' can be reduced. [variableScope]
+        uint32_t r, g, b, a;
+                    ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1850:24: style: The scope of the variable 'b' can be reduced. [variableScope]
+        uint32_t r, g, b, a;
+                       ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1850:27: style: The scope of the variable 'a' can be reduced. [variableScope]
+        uint32_t r, g, b, a;
+                          ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1924:18: style: The scope of the variable 'r' can be reduced. [variableScope]
+        uint32_t r, g, b, a;
+                 ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1924:21: style: The scope of the variable 'g' can be reduced. [variableScope]
+        uint32_t r, g, b, a;
+                    ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1924:24: style: The scope of the variable 'b' can be reduced. [variableScope]
+        uint32_t r, g, b, a;
+                       ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1924:27: style: The scope of the variable 'a' can be reduced. [variableScope]
+        uint32_t r, g, b, a;
+                          ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:2041:18: style: The scope of the variable 'rv' can be reduced. [variableScope]
+        uint32_t rv, gv, bv, kv;
+                 ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:2041:22: style: The scope of the variable 'gv' can be reduced. [variableScope]
+        uint32_t rv, gv, bv, kv;
+                     ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:2041:26: style: The scope of the variable 'bv' can be reduced. [variableScope]
+        uint32_t rv, gv, bv, kv;
+                         ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:2041:30: style: The scope of the variable 'kv' can be reduced. [variableScope]
+        uint32_t rv, gv, bv, kv;
+                             ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:2064:18: style: The scope of the variable 'rv' can be reduced. [variableScope]
+        uint32_t rv, gv, bv, av;
+                 ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:2064:22: style: The scope of the variable 'gv' can be reduced. [variableScope]
+        uint32_t rv, gv, bv, av;
+                     ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:2064:26: style: The scope of the variable 'bv' can be reduced. [variableScope]
+        uint32_t rv, gv, bv, av;
+                         ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:2064:30: style: The scope of the variable 'av' can be reduced. [variableScope]
+        uint32_t rv, gv, bv, av;
+                             ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:2135:18: style: The scope of the variable 'r2' can be reduced. [variableScope]
+        uint32_t r2, g2, b2, a2;
+                 ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:2135:22: style: The scope of the variable 'g2' can be reduced. [variableScope]
+        uint32_t r2, g2, b2, a2;
+                     ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:2135:26: style: The scope of the variable 'b2' can be reduced. [variableScope]
+        uint32_t r2, g2, b2, a2;
+                         ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:2135:30: style: The scope of the variable 'a2' can be reduced. [variableScope]
+        uint32_t r2, g2, b2, a2;
+                             ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:3354:28: style: The scope of the variable 'rows_to_read' can be reduced. [variableScope]
+    uint32_t rowsperstrip, rows_to_read;
+                           ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:85:20: style: Variable 'td' can be declared as pointer to const [constVariablePointer]
+    TIFFDirectory *td = &tif->tif_dir;
+                   ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:663:42: style: Parameter 'img' can be declared as pointer to const [constParameterPointer]
+static int setorientation(TIFFRGBAImage *img)
+                                         ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1630:19: style: Variable 'bw' can be declared as pointer to const [constVariablePointer]
+        uint32_t *bw;
+                  ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1649:19: style: Variable 'bw' can be declared as pointer to const [constVariablePointer]
+        uint32_t *bw;
+                  ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1668:19: style: Variable 'bw' can be declared as pointer to const [constVariablePointer]
+        uint32_t *bw;
+                  ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1755:19: style: Variable 'bw' can be declared as pointer to const [constVariablePointer]
+        uint32_t *bw;
+                  ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1774:19: style: Variable 'bw' can be declared as pointer to const [constVariablePointer]
+        uint32_t *bw;
+                  ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1793:19: style: Variable 'bw' can be declared as pointer to const [constVariablePointer]
+        uint32_t *bw;
+                  ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1803:1: style: Parameter 'img' can be declared as pointer to const. However it seems that 'putRGBcontig8bittile' is a callback function, if 'img' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+DECLAREContigPutFunc(putRGBcontig8bittile)
+^
+/analysis/libtiff-src/libtiff/tif_getimage.c:3078:43: note: You might need to cast the function pointer here
+                        img->put.contig = putRGBcontig8bittile;
+                                          ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1803:1: note: Parameter 'img' can be declared as pointer to const
+DECLAREContigPutFunc(putRGBcontig8bittile)
+^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1823:1: style: Parameter 'img' can be declared as pointer to const. However it seems that 'putRGBAAcontig8bittile' is a callback function, if 'img' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+DECLAREContigPutFunc(putRGBAAcontig8bittile)
+^
+/analysis/libtiff-src/libtiff/tif_getimage.c:3070:43: note: You might need to cast the function pointer here
+                        img->put.contig = putRGBAAcontig8bittile;
+                                          ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1823:1: note: Parameter 'img' can be declared as pointer to const
+DECLAREContigPutFunc(putRGBAAcontig8bittile)
+^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1843:1: style: Parameter 'img' can be declared as pointer to const. However it seems that 'putRGBUAcontig8bittile' is a callback function, if 'img' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+DECLAREContigPutFunc(putRGBUAcontig8bittile)
+^
+/analysis/libtiff-src/libtiff/tif_getimage.c:3075:47: note: You might need to cast the function pointer here
+                            img->put.contig = putRGBUAcontig8bittile;
+                                              ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1843:1: note: Parameter 'img' can be declared as pointer to const
+DECLAREContigPutFunc(putRGBUAcontig8bittile)
+^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1851:18: style: Variable 'm' can be declared as pointer to const [constVariablePointer]
+        uint8_t *m;
+                 ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1870:1: style: Parameter 'img' can be declared as pointer to const. However it seems that 'putRGBcontig16bittile' is a callback function, if 'img' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+DECLAREContigPutFunc(putRGBcontig16bittile)
+^
+/analysis/libtiff-src/libtiff/tif_getimage.c:3096:47: note: You might need to cast the function pointer here
+                            img->put.contig = putRGBcontig16bittile;
+                                              ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1870:1: note: Parameter 'img' can be declared as pointer to const
+DECLAREContigPutFunc(putRGBcontig16bittile)
+^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1893:1: style: Parameter 'img' can be declared as pointer to const. However it seems that 'putRGBAAcontig16bittile' is a callback function, if 'img' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+DECLAREContigPutFunc(putRGBAAcontig16bittile)
+^
+/analysis/libtiff-src/libtiff/tif_getimage.c:3085:47: note: You might need to cast the function pointer here
+                            img->put.contig = putRGBAAcontig16bittile;
+                                              ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1893:1: note: Parameter 'img' can be declared as pointer to const
+DECLAREContigPutFunc(putRGBAAcontig16bittile)
+^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1916:1: style: Parameter 'img' can be declared as pointer to const. However it seems that 'putRGBUAcontig16bittile' is a callback function, if 'img' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+DECLAREContigPutFunc(putRGBUAcontig16bittile)
+^
+/analysis/libtiff-src/libtiff/tif_getimage.c:3091:47: note: You might need to cast the function pointer here
+                            img->put.contig = putRGBUAcontig16bittile;
+                                              ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1916:1: note: Parameter 'img' can be declared as pointer to const
+DECLAREContigPutFunc(putRGBUAcontig16bittile)
+^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1925:18: style: Variable 'm' can be declared as pointer to const [constVariablePointer]
+        uint8_t *m;
+                 ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1946:1: style: Parameter 'img' can be declared as pointer to const. However it seems that 'putRGBcontig8bitCMYKtile' is a callback function, if 'img' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+DECLAREContigPutFunc(putRGBcontig8bitCMYKtile)
+^
+/analysis/libtiff-src/libtiff/tif_getimage.c:3107:43: note: You might need to cast the function pointer here
+                        img->put.contig = putRGBcontig8bitCMYKtile;
+                                          ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1946:1: note: Parameter 'img' can be declared as pointer to const
+DECLAREContigPutFunc(putRGBcontig8bitCMYKtile)
+^
+/analysis/libtiff-src/libtiff/tif_getimage.c:1972:19: style: Variable 'Map' can be declared as pointer to const [constVariablePointer]
+    TIFFRGBValue *Map = img->Map;
+                  ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:2065:18: style: Variable 'm' can be declared as pointer to const [constVariablePointer]
+        uint8_t *m;
+                 ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:2083:1: style: Parameter 'img' can be declared as pointer to const. However it seems that 'putRGBseparate16bittile' is a callback function, if 'img' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+DECLARESepPutFunc(putRGBseparate16bittile)
+^
+/analysis/libtiff-src/libtiff/tif_getimage.c:3260:49: note: You might need to cast the function pointer here
+                            img->put.separate = putRGBseparate16bittile;
+                                                ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:2083:1: note: Parameter 'img' can be declared as pointer to const
+DECLARESepPutFunc(putRGBseparate16bittile)
+^
+/analysis/libtiff-src/libtiff/tif_getimage.c:2104:1: style: Parameter 'img' can be declared as pointer to const. However it seems that 'putRGBAAseparate16bittile' is a callback function, if 'img' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+DECLARESepPutFunc(putRGBAAseparate16bittile)
+^
+/analysis/libtiff-src/libtiff/tif_getimage.c:3250:49: note: You might need to cast the function pointer here
+                            img->put.separate = putRGBAAseparate16bittile;
+                                                ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:2104:1: note: Parameter 'img' can be declared as pointer to const
+DECLARESepPutFunc(putRGBAAseparate16bittile)
+^
+/analysis/libtiff-src/libtiff/tif_getimage.c:2125:1: style: Parameter 'img' can be declared as pointer to const. However it seems that 'putRGBUAseparate16bittile' is a callback function, if 'img' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+DECLARESepPutFunc(putRGBUAseparate16bittile)
+^
+/analysis/libtiff-src/libtiff/tif_getimage.c:3255:49: note: You might need to cast the function pointer here
+                            img->put.separate = putRGBUAseparate16bittile;
+                                                ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:2125:1: note: Parameter 'img' can be declared as pointer to const
+DECLARESepPutFunc(putRGBUAseparate16bittile)
+^
+/analysis/libtiff-src/libtiff/tif_getimage.c:2136:18: style: Variable 'm' can be declared as pointer to const [constVariablePointer]
+        uint8_t *m;
+                 ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:2812:19: style: Variable 'Map' can be declared as pointer to const [constVariablePointer]
+    TIFFRGBValue *Map = img->Map;
+                  ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:2961:15: style: Variable 'r' can be declared as pointer to const [constVariablePointer]
+    uint16_t *r = img->redcmap;
+              ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:2962:15: style: Variable 'g' can be declared as pointer to const [constVariablePointer]
+    uint16_t *g = img->greencmap;
+              ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:2963:15: style: Variable 'b' can be declared as pointer to const [constVariablePointer]
+    uint16_t *b = img->bluecmap;
+              ^
+/analysis/libtiff-src/libtiff/tif_getimage.c:2560:17: style: Variable 'cp2' is assigned a value that is never used. [unreadVariable]
+            cp2 += 2;
+                ^
+/analysis/libtiff-src/libtiff/tif_hash_set.c:29:0: information: Include file: "tif_config.h" not found. [missingInclude]
+#include "tif_config.h"
+^
+/analysis/libtiff-src/libtiff/tif_hash_set.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+/analysis/libtiff-src/libtiff/tif_jbig.c:36:0: information: Include file: "jbig.h" not found. [missingInclude]
+#include "jbig.h"
+^
+/analysis/libtiff-src/libtiff/tif_jbig.c:105:61: error: There is an unknown macro here somewhere. Configuration is required. If TIFF_SSIZE_FORMAT is a macro then please configure it. [unknownMacro]
+                        "Only decoded %lu bytes, whereas %" TIFF_SSIZE_FORMAT
+                                                            ^
+/analysis/libtiff-src/libtiff/tif_jpeg.c:76:0: information: Include file: "jerror.h" not found. [missingInclude]
+#include "jerror.h"
+^
+/analysis/libtiff-src/libtiff/tif_jpeg.c:77:0: information: Include file: "jpeglib.h" not found. [missingInclude]
+#include "jpeglib.h"
+^
+/analysis/libtiff-src/libtiff/tif_jpeg.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+/analysis/libtiff-src/libtiff/tif_jpeg.c:2400:9: style: The scope of the variable 'clumpoffset' can be reduced. [variableScope]
+    int clumpoffset, ci, xpos, ypos;
+        ^
+/analysis/libtiff-src/libtiff/tif_jpeg.c:2738:49: style: inconclusive: Function 'JPEGInitializeLibJPEG' argument 2 names different: declaration 'decode' definition 'decompress'. [funcArgNamesDifferent]
+static int JPEGInitializeLibJPEG(TIFF *tif, int decompress)
+                                                ^
+/analysis/libtiff-src/libtiff/tif_jpeg.c:219:49: note: Function 'JPEGInitializeLibJPEG' argument 2 names different: declaration 'decode' definition 'decompress'.
+static int JPEGInitializeLibJPEG(TIFF *tif, int decode);
+                                                ^
+/analysis/libtiff-src/libtiff/tif_jpeg.c:2738:49: note: Function 'JPEGInitializeLibJPEG' argument 2 names different: declaration 'decode' definition 'decompress'.
+static int JPEGInitializeLibJPEG(TIFF *tif, int decompress)
+                                                ^
+/analysis/libtiff-src/libtiff/tif_jpeg.c:615:11: style: Variable 'tif' can be declared as pointer to const [constVariablePointer]
+    TIFF *tif = sp->tif;
+          ^
+/analysis/libtiff-src/libtiff/tif_jpeg.c:790:16: style: Variable 'sp' can be declared as pointer to const [constVariablePointer]
+    JPEGState *sp = JState(tif);
+               ^
+/analysis/libtiff-src/libtiff/tif_jpeg.c:1640:20: style: Variable 'td' can be declared as pointer to const [constVariablePointer]
+    TIFFDirectory *td = &tif->tif_dir;
+                   ^
+/analysis/libtiff-src/libtiff/tif_jpeg.c:1708:35: style: Variable 'inptr' can be declared as pointer to const [constVariablePointer]
+                    TIFF_JSAMPLE *inptr =
+                                  ^
+/analysis/libtiff-src/libtiff/tif_jpeg.c:1816:47: style: Parameter 'sp' can be declared as pointer to const [constParameterPointer]
+static void unsuppress_quant_table(JPEGState *sp, int tblno)
+                                              ^
+/analysis/libtiff-src/libtiff/tif_jpeg.c:1824:45: style: Parameter 'sp' can be declared as pointer to const [constParameterPointer]
+static void suppress_quant_table(JPEGState *sp, int tblno)
+                                            ^
+/analysis/libtiff-src/libtiff/tif_jpeg.c:1832:46: style: Parameter 'sp' can be declared as pointer to const [constParameterPointer]
+static void unsuppress_huff_table(JPEGState *sp, int tblno)
+                                             ^
+/analysis/libtiff-src/libtiff/tif_jpeg.c:1842:44: style: Parameter 'sp' can be declared as pointer to const [constParameterPointer]
+static void suppress_huff_table(JPEGState *sp, int tblno)
+                                           ^
+/analysis/libtiff-src/libtiff/tif_jpeg.c:2154:20: style: Variable 'td' can be declared as pointer to const [constVariablePointer]
+    TIFFDirectory *td = &tif->tif_dir;
+                   ^
+/analysis/libtiff-src/libtiff/tif_jpeg.c:2363:32: style: Variable 'in_ptr' can be declared as pointer to const [constVariablePointer]
+                unsigned char *in_ptr = ((unsigned char *)buf) + iPair * 3;
+                               ^
+/analysis/libtiff-src/libtiff/tif_jpeg.c:2555:16: style: Variable 'sp' can be declared as pointer to const [constVariablePointer]
+    JPEGState *sp = JState(tif);
+               ^
+/analysis/libtiff-src/libtiff/tif_jpeg.c:2556:20: style: Variable 'td' can be declared as pointer to const [constVariablePointer]
+    TIFFDirectory *td = &tif->tif_dir;
+                   ^
+/analysis/libtiff-src/libtiff/tif_jpeg.c:787:32: style: Parameter 'tif' can be declared as pointer to const. However it seems that 'JPEGFixupTags' is a callback function, if 'tif' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int JPEGFixupTags(TIFF *tif)
+                               ^
+/analysis/libtiff-src/libtiff/tif_jpeg.c:2820:26: note: You might need to cast the function pointer here
+    tif->tif_fixuptags = JPEGFixupTags;
+                         ^
+/analysis/libtiff-src/libtiff/tif_jpeg.c:787:32: note: Parameter 'tif' can be declared as pointer to const
+static int JPEGFixupTags(TIFF *tif)
+                               ^
+/analysis/libtiff-src/libtiff/tif_jpeg.c:1573:39: style: Variable 'in_ptr' can be declared as pointer to const [constVariablePointer]
+                        TIFF_JSAMPLE *in_ptr = line_work_buf + iPair * 2;
+                                      ^
+/analysis/libtiff-src/libtiff/tif_jpeg.c:1775:39: style: Variable 'in_ptr' can be declared as pointer to const [constVariablePointer]
+                        TIFF_JSAMPLE *in_ptr =
+                                      ^
+/analysis/libtiff-src/libtiff/tif_jpeg_12.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+/analysis/libtiff-src/libtiff/tif_lerc.c:34:0: information: Include file: "Lerc_c_api.h" not found. [missingInclude]
+#include "Lerc_c_api.h"
+^
+/analysis/libtiff-src/libtiff/tif_lerc.c:35:0: information: Include file: "zlib.h" not found. [missingInclude]
+#include "zlib.h"
+^
+/analysis/libtiff-src/libtiff/tif_lerc.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+/analysis/libtiff-src/libtiff/tif_lerc.c:647:26: portability: Casting between unsigned char * and float * which have an incompatible binary data representation. [invalidPointerCast]
+                        ((float *)sp->uncompressed_buffer)[i] = nan_float32;
+                         ^
+/analysis/libtiff-src/libtiff/tif_lerc.c:656:26: portability: Casting between unsigned char * and double * which have an incompatible binary data representation. [invalidPointerCast]
+                        ((double *)sp->uncompressed_buffer)[i] = nan_float64;
+                         ^
+/analysis/libtiff-src/libtiff/tif_lerc.c:673:30: portability: Casting between unsigned char * and float * which have an incompatible binary data representation. [invalidPointerCast]
+                            ((float *)sp->uncompressed_buffer)[k] = nan_float32;
+                             ^
+/analysis/libtiff-src/libtiff/tif_lerc.c:686:30: portability: Casting between unsigned char * and double * which have an incompatible binary data representation. [invalidPointerCast]
+                            ((double *)sp->uncompressed_buffer)[k] =
+                             ^
+/analysis/libtiff-src/libtiff/tif_lerc.c:924:44: portability: Casting between unsigned char * and float * which have an incompatible binary data representation. [invalidPointerCast]
+                        const float val = ((float *)sp->uncompressed_buffer)[k];
+                                           ^
+/analysis/libtiff-src/libtiff/tif_lerc.c:946:40: portability: Casting between unsigned char * and float * which have an incompatible binary data representation. [invalidPointerCast]
+                    const float val = ((float *)sp->uncompressed_buffer)[i];
+                                       ^
+/analysis/libtiff-src/libtiff/tif_lerc.c:966:30: portability: Casting between unsigned char * and double * which have an incompatible binary data representation. [invalidPointerCast]
+                            ((double *)sp->uncompressed_buffer)[k];
+                             ^
+/analysis/libtiff-src/libtiff/tif_lerc.c:988:41: portability: Casting between unsigned char * and double * which have an incompatible binary data representation. [invalidPointerCast]
+                    const double val = ((double *)sp->uncompressed_buffer)[i];
+                                        ^
+/analysis/libtiff-src/libtiff/tif_lerc.c:1066:30: portability: Casting between unsigned char * and float * which have an incompatible binary data representation. [invalidPointerCast]
+                            ((float *)sp->uncompressed_buffer)[i * dst_nbands];
+                             ^
+/analysis/libtiff-src/libtiff/tif_lerc.c:1075:30: portability: Casting between unsigned char * and double * which have an incompatible binary data representation. [invalidPointerCast]
+                            ((double *)sp->uncompressed_buffer)[i * dst_nbands];
+                             ^
+/analysis/libtiff-src/libtiff/tif_lerc.c:1086:44: portability: Casting between unsigned char * and float * which have an incompatible binary data representation. [invalidPointerCast]
+                        const float val = ((float *)sp->uncompressed_buffer)[i];
+                                           ^
+/analysis/libtiff-src/libtiff/tif_lerc.c:1095:30: portability: Casting between unsigned char * and double * which have an incompatible binary data representation. [invalidPointerCast]
+                            ((double *)sp->uncompressed_buffer)[i];
+                             ^
+/analysis/libtiff-src/libtiff/tif_lerc.c:122:20: style: Variable 'td' can be declared as pointer to const [constVariablePointer]
+    TIFFDirectory *td = &tif->tif_dir;
+                   ^
+/analysis/libtiff-src/libtiff/tif_lerc.c:175:20: style: Variable 'td' can be declared as pointer to const [constVariablePointer]
+    TIFFDirectory *td = &tif->tif_dir;
+                   ^
+/analysis/libtiff-src/libtiff/tif_lerc.c:819:43: style: Parameter 'bp' can be declared as pointer to const. However it seems that 'LERCEncode' is a callback function, if 'bp' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int LERCEncode(TIFF *tif, uint8_t *bp, tmsize_t cc, uint16_t s)
+                                          ^
+/analysis/libtiff-src/libtiff/tif_lerc.c:1528:27: note: You might need to cast the function pointer here
+    tif->tif_encodetile = LERCEncode;
+                          ^
+/analysis/libtiff-src/libtiff/tif_lerc.c:819:43: note: Parameter 'bp' can be declared as pointer to const
+static int LERCEncode(TIFF *tif, uint8_t *bp, tmsize_t cc, uint16_t s)
+                                          ^
+/analysis/libtiff-src/libtiff/tif_lerc.c:505:25: style: Condition 'nFoundBands!=td->td_samplesperpixel' is always true [knownConditionTrueFalse]
+        if (nFoundBands != td->td_samplesperpixel)
+                        ^
+/analysis/libtiff-src/libtiff/tif_lerc.c:41:0: information: Include file: "libdeflate.h" not found. [missingInclude]
+#include "libdeflate.h"
+^
+/analysis/libtiff-src/libtiff/tif_lerc.c:37:0: information: Include file: "zstd.h" not found. [missingInclude]
+#include "zstd.h"
+^
+/analysis/libtiff-src/libtiff/tif_luv.c:245:39: error: There is an unknown macro here somewhere. Configuration is required. If TIFF_SSIZE_FORMAT is a macro then please configure it. [unknownMacro]
+                          " (short %" TIFF_SSIZE_FORMAT " pixels)",
+                                      ^
+/analysis/libtiff-src/libtiff/tif_lzma.c:36:0: information: Include file: "lzma.h" not found. [missingInclude]
+#include "lzma.h"
+^
+/analysis/libtiff-src/libtiff/tif_lzma.c:244:35: error: There is an unknown macro here somewhere. Configuration is required. If TIFF_SIZE_FORMAT is a macro then please configure it. [unknownMacro]
+                      " (short %" TIFF_SIZE_FORMAT " bytes)",
+                                  ^
+/analysis/libtiff-src/libtiff/tif_lzw.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+/analysis/libtiff-src/libtiff/tif_lzw.c:514:35: style: inconclusive: Boolean expression 'oldcodep->repeated' is used in bitwise operation. Did you mean '&&'? [bitwiseOnBoolean]
+        (bool)(oldcodep->repeated & (oldcodep->value == code));
+                                  ^
+/analysis/libtiff-src/libtiff/tif_lzw.c:555:35: style: inconclusive: Boolean expression 'oldcodep->repeated' is used in bitwise operation. Did you mean '&&'? [bitwiseOnBoolean]
+        (bool)(oldcodep->repeated & (oldcodep->value == free_entp->value));
+                                  ^
+/analysis/libtiff-src/libtiff/tif_lzw.c:254:29: warning: Identical inner 'if' condition is always true. [identicalInnerCondition]
+        if (sp->dec_codetab == NULL)
+                            ^
+/analysis/libtiff-src/libtiff/tif_lzw.c:251:25: note: outer condition: sp->dec_codetab==NULL
+    if (sp->dec_codetab == NULL)
+                        ^
+/analysis/libtiff-src/libtiff/tif_lzw.c:254:29: note: identical inner condition: sp->dec_codetab==NULL
+        if (sp->dec_codetab == NULL)
+                            ^
+/analysis/libtiff-src/libtiff/tif_lzw.c:186:9: style: The scope of the variable 'code' can be reduced. [variableScope]
+    int code;
+        ^
+/analysis/libtiff-src/libtiff/tif_lzw.c:465:18: style: The scope of the variable 'tp' can be reduced. [variableScope]
+        uint8_t *tp = op;
+                 ^
+/analysis/libtiff-src/libtiff/tif_lzw.c:1117:42: style: Parameter 'bp' can be declared as pointer to const. However it seems that 'LZWEncode' is a callback function, if 'bp' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int LZWEncode(TIFF *tif, uint8_t *bp, tmsize_t cc, uint16_t s)
+                                         ^
+/analysis/libtiff-src/libtiff/tif_lzw.c:1431:27: note: You might need to cast the function pointer here
+    tif->tif_encodetile = LZWEncode;
+                          ^
+/analysis/libtiff-src/libtiff/tif_lzw.c:1117:42: note: Parameter 'bp' can be declared as pointer to const
+static int LZWEncode(TIFF *tif, uint8_t *bp, tmsize_t cc, uint16_t s)
+                                         ^
+/analysis/libtiff-src/libtiff/tif_lzw.c:1130:14: style: Variable 'limit' can be declared as pointer to const [constVariablePointer]
+    uint8_t *limit;
+             ^
+/analysis/libtiff-src/libtiff/tif_ojpeg.c:209:0: information: Include file: "jerror.h" not found. [missingInclude]
+#include "jerror.h"
+^
+/analysis/libtiff-src/libtiff/tif_ojpeg.c:210:0: information: Include file: "jpeglib.h" not found. [missingInclude]
+#include "jpeglib.h"
+^
+/analysis/libtiff-src/libtiff/tif_ojpeg.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+/analysis/libtiff-src/libtiff/tif_ojpeg.c:2275:57: style: Condition 'sp->in_buffer_file_togo==0' is always false [knownConditionTrueFalse]
+                            if (sp->in_buffer_file_togo == 0)
+                                                        ^
+/analysis/libtiff-src/libtiff/tif_ojpeg.c:2269:44: note: Assuming that condition 'bytecount==0' is not redundant
+                        else if (bytecount == 0)
+                                           ^
+/analysis/libtiff-src/libtiff/tif_ojpeg.c:2274:55: note: Assignment 'sp->in_buffer_file_togo=bytecount', assigned value is greater than 0
+                            sp->in_buffer_file_togo = bytecount;
+                                                      ^
+/analysis/libtiff-src/libtiff/tif_ojpeg.c:2275:57: note: Condition 'sp->in_buffer_file_togo==0' is always false
+                            if (sp->in_buffer_file_togo == 0)
+                                                        ^
+/analysis/libtiff-src/libtiff/tif_ojpeg.c:895:14: style: The scope of the variable 'ocb' can be reduced. [variableScope]
+    uint8_t *ocb;
+             ^
+/analysis/libtiff-src/libtiff/tif_ojpeg.c:896:14: style: The scope of the variable 'ocr' can be reduced. [variableScope]
+    uint8_t *ocr;
+             ^
+/analysis/libtiff-src/libtiff/tif_ojpeg.c:897:14: style: The scope of the variable 'p' can be reduced. [variableScope]
+    uint8_t *p;
+             ^
+/analysis/libtiff-src/libtiff/tif_ojpeg.c:1089:13: style: The scope of the variable 'mh' can be reduced. [variableScope]
+    uint8_t mh;
+            ^
+/analysis/libtiff-src/libtiff/tif_ojpeg.c:1090:13: style: The scope of the variable 'mv' can be reduced. [variableScope]
+    uint8_t mv;
+            ^
+/analysis/libtiff-src/libtiff/tif_ojpeg.c:1491:13: style: The scope of the variable 'o' can be reduced. [variableScope]
+    uint8_t o;
+            ^
+/analysis/libtiff-src/libtiff/tif_ojpeg.c:1650:14: style: The scope of the variable 'na' can be reduced. [variableScope]
+    uint32_t na;
+             ^
+/analysis/libtiff-src/libtiff/tif_ojpeg.c:1652:13: style: The scope of the variable 'o' can be reduced. [variableScope]
+    uint8_t o;
+            ^
+/analysis/libtiff-src/libtiff/tif_ojpeg.c:1715:14: style: The scope of the variable 'na' can be reduced. [variableScope]
+    uint32_t na;
+             ^
+/analysis/libtiff-src/libtiff/tif_ojpeg.c:1717:13: style: The scope of the variable 'o' can be reduced. [variableScope]
+    uint8_t o;
+            ^
+/analysis/libtiff-src/libtiff/tif_ojpeg.c:2345:14: style: The scope of the variable 'n' can be reduced. [variableScope]
+    uint16_t n;
+             ^
+/analysis/libtiff-src/libtiff/tif_ojpeg.c:568:15: style: Variable 'mb' can be declared as pointer to const [constVariablePointer]
+    uint64_t *mb;
+              ^
+/analysis/libtiff-src/libtiff/tif_ojpeg.c:841:17: style: Variable 'sp' can be declared as pointer to const [constVariablePointer]
+    OJPEGState *sp = (OJPEGState *)tif->tif_data;
+                ^
+/analysis/libtiff-src/libtiff/tif_ojpeg.c:895:14: style: Variable 'ocb' can be declared as pointer to const [constVariablePointer]
+    uint8_t *ocb;
+             ^
+/analysis/libtiff-src/libtiff/tif_ojpeg.c:896:14: style: Variable 'ocr' can be declared as pointer to const [constVariablePointer]
+    uint8_t *ocr;
+             ^
+/analysis/libtiff-src/libtiff/tif_ojpeg.c:2400:17: style: Variable 'sp' can be declared as pointer to const [constVariablePointer]
+    OJPEGState *sp = (OJPEGState *)tif->tif_data;
+                ^
+/analysis/libtiff-src/libtiff/tif_ojpeg.c:2662:65: style: inconclusive: Function 'jpeg_create_decompress_encap' argument 2 names different: declaration 'j' definition 'cinfo'. [funcArgNamesDifferent]
+                                        jpeg_decompress_struct *cinfo)
+                                                                ^
+/analysis/libtiff-src/libtiff/tif_ojpeg.c:430:65: note: Function 'jpeg_create_decompress_encap' argument 2 names different: declaration 'j' definition 'cinfo'.
+                                        jpeg_decompress_struct *j);
+                                                                ^
+/analysis/libtiff-src/libtiff/tif_ojpeg.c:2662:65: note: Function 'jpeg_create_decompress_encap' argument 2 names different: declaration 'j' definition 'cinfo'.
+                                        jpeg_decompress_struct *cinfo)
+                                                                ^
+/analysis/libtiff-src/libtiff/tif_open.c:798:32: style: Parameter 'tif' can be declared as pointer to const [constParameterPointer]
+const char *TIFFFileName(TIFF *tif) { return (tif->tif_name); }
+                               ^
+/analysis/libtiff-src/libtiff/tif_open.c:813:22: style: Parameter 'tif' can be declared as pointer to const [constParameterPointer]
+int TIFFFileno(TIFF *tif) { return (tif->tif_fd); }
+                     ^
+/analysis/libtiff-src/libtiff/tif_open.c:828:32: style: Parameter 'tif' can be declared as pointer to const [constParameterPointer]
+thandle_t TIFFClientdata(TIFF *tif) { return (tif->tif_clientdata); }
+                               ^
+/analysis/libtiff-src/libtiff/tif_open.c:843:23: style: Parameter 'tif' can be declared as pointer to const [constParameterPointer]
+int TIFFGetMode(TIFF *tif) { return (tif->tif_mode); }
+                      ^
+/analysis/libtiff-src/libtiff/tif_open.c:859:23: style: Parameter 'tif' can be declared as pointer to const [constParameterPointer]
+int TIFFIsTiled(TIFF *tif) { return (isTiled(tif)); }
+                      ^
+/analysis/libtiff-src/libtiff/tif_open.c:864:31: style: Parameter 'tif' can be declared as pointer to const [constParameterPointer]
+uint32_t TIFFCurrentRow(TIFF *tif) { return (tif->tif_row); }
+                              ^
+/analysis/libtiff-src/libtiff/tif_open.c:869:35: style: Parameter 'tif' can be declared as pointer to const [constParameterPointer]
+tdir_t TIFFCurrentDirectory(TIFF *tif) { return (tif->tif_curdir); }
+                                  ^
+/analysis/libtiff-src/libtiff/tif_open.c:874:33: style: Parameter 'tif' can be declared as pointer to const [constParameterPointer]
+uint32_t TIFFCurrentStrip(TIFF *tif) { return (tif->tif_curstrip); }
+                                ^
+/analysis/libtiff-src/libtiff/tif_open.c:879:32: style: Parameter 'tif' can be declared as pointer to const [constParameterPointer]
+uint32_t TIFFCurrentTile(TIFF *tif) { return (tif->tif_curtile); }
+                               ^
+/analysis/libtiff-src/libtiff/tif_open.c:884:29: style: Parameter 'tif' can be declared as pointer to const [constParameterPointer]
+int TIFFIsByteSwapped(TIFF *tif) { return ((tif->tif_flags & TIFF_SWAB) != 0); }
+                            ^
+/analysis/libtiff-src/libtiff/tif_open.c:889:27: style: Parameter 'tif' can be declared as pointer to const [constParameterPointer]
+int TIFFIsUpSampled(TIFF *tif) { return (isUpSampled(tif)); }
+                          ^
+/analysis/libtiff-src/libtiff/tif_open.c:894:25: style: Parameter 'tif' can be declared as pointer to const [constParameterPointer]
+int TIFFIsMSB2LSB(TIFF *tif) { return (isFillOrder(tif, FILLORDER_MSB2LSB)); }
+                        ^
+/analysis/libtiff-src/libtiff/tif_open.c:907:25: style: Parameter 'tif' can be declared as pointer to const [constParameterPointer]
+int TIFFIsBigTIFF(TIFF *tif) { return ((tif->tif_flags & TIFF_BIGTIFF) != 0); }
+                        ^
+/analysis/libtiff-src/libtiff/tif_open.c:912:41: style: Parameter 'tif' can be declared as pointer to const [constParameterPointer]
+TIFFReadWriteProc TIFFGetReadProc(TIFF *tif) { return (tif->tif_readproc); }
+                                        ^
+/analysis/libtiff-src/libtiff/tif_open.c:917:42: style: Parameter 'tif' can be declared as pointer to const [constParameterPointer]
+TIFFReadWriteProc TIFFGetWriteProc(TIFF *tif) { return (tif->tif_writeproc); }
+                                         ^
+/analysis/libtiff-src/libtiff/tif_open.c:922:36: style: Parameter 'tif' can be declared as pointer to const [constParameterPointer]
+TIFFSeekProc TIFFGetSeekProc(TIFF *tif) { return (tif->tif_seekproc); }
+                                   ^
+/analysis/libtiff-src/libtiff/tif_open.c:927:38: style: Parameter 'tif' can be declared as pointer to const [constParameterPointer]
+TIFFCloseProc TIFFGetCloseProc(TIFF *tif) { return (tif->tif_closeproc); }
+                                     ^
+/analysis/libtiff-src/libtiff/tif_open.c:932:36: style: Parameter 'tif' can be declared as pointer to const [constParameterPointer]
+TIFFSizeProc TIFFGetSizeProc(TIFF *tif) { return (tif->tif_sizeproc); }
+                                   ^
+/analysis/libtiff-src/libtiff/tif_open.c:937:42: style: Parameter 'tif' can be declared as pointer to const [constParameterPointer]
+TIFFMapFileProc TIFFGetMapFileProc(TIFF *tif) { return (tif->tif_mapproc); }
+                                         ^
+/analysis/libtiff-src/libtiff/tif_open.c:942:46: style: Parameter 'tif' can be declared as pointer to const [constParameterPointer]
+TIFFUnmapFileProc TIFFGetUnmapFileProc(TIFF *tif)
+                                             ^
+/analysis/libtiff-src/libtiff/tif_open.c:328:22: style: union member 'Anonymous2::a16' is never used. [unusedStructMember]
+            uint16_t a16;
+                     ^
+/analysis/libtiff-src/libtiff/tif_packbits.c:261:48: error: There is an unknown macro here somewhere. Configuration is required. If TIFF_SSIZE_FORMAT is a macro then please configure it. [unknownMacro]
+                                "Discarding %" TIFF_SSIZE_FORMAT
+                                               ^
+/analysis/libtiff-src/libtiff/tif_pixarlog.c:91:0: information: Include file: "zlib.h" not found. [missingInclude]
+#include "zlib.h"
+^
+/analysis/libtiff-src/libtiff/tif_pixarlog.c:945:29: error: There is an unknown macro here somewhere. Configuration is required. If TIFF_SSIZE_FORMAT is a macro then please configure it. [unknownMacro]
+                        "%" TIFF_SSIZE_FORMAT ", data truncated.",
+                            ^
+/analysis/libtiff-src/libtiff/tif_predict.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+/analysis/libtiff-src/libtiff/tif_predict.c:727:26: style: The scope of the variable 'r1' can be reduced. [variableScope]
+            unsigned int r1, g1, b1;
+                         ^
+/analysis/libtiff-src/libtiff/tif_predict.c:727:30: style: The scope of the variable 'g1' can be reduced. [variableScope]
+            unsigned int r1, g1, b1;
+                             ^
+/analysis/libtiff-src/libtiff/tif_predict.c:727:34: style: The scope of the variable 'b1' can be reduced. [variableScope]
+            unsigned int r1, g1, b1;
+                                 ^
+/analysis/libtiff-src/libtiff/tif_predict.c:747:26: style: The scope of the variable 'r1' can be reduced. [variableScope]
+            unsigned int r1, g1, b1, a1;
+                         ^
+/analysis/libtiff-src/libtiff/tif_predict.c:747:30: style: The scope of the variable 'g1' can be reduced. [variableScope]
+            unsigned int r1, g1, b1, a1;
+                             ^
+/analysis/libtiff-src/libtiff/tif_predict.c:747:34: style: The scope of the variable 'b1' can be reduced. [variableScope]
+            unsigned int r1, g1, b1, a1;
+                                 ^
+/analysis/libtiff-src/libtiff/tif_predict.c:747:38: style: The scope of the variable 'a1' can be reduced. [variableScope]
+            unsigned int r1, g1, b1, a1;
+                                     ^
+/analysis/libtiff-src/libtiff/tif_predict.c:130:20: style: Variable 'td' can be declared as pointer to const [constVariablePointer]
+    TIFFDirectory *td = &tif->tif_dir;
+                   ^
+/analysis/libtiff-src/libtiff/tif_predict.c:229:20: style: Variable 'td' can be declared as pointer to const [constVariablePointer]
+    TIFFDirectory *td = &tif->tif_dir;
+                   ^
+/analysis/libtiff-src/libtiff/tif_predict.c:709:25: style: Variable 'sp' can be declared as pointer to const [constVariablePointer]
+    TIFFPredictorState *sp = PredictorState(tif);
+                        ^
+/analysis/libtiff-src/libtiff/tif_predict.c:787:25: style: Variable 'sp' can be declared as pointer to const [constVariablePointer]
+    TIFFPredictorState *sp = PredictorState(tif);
+                        ^
+/analysis/libtiff-src/libtiff/tif_predict.c:829:25: style: Variable 'sp' can be declared as pointer to const [constVariablePointer]
+    TIFFPredictorState *sp = PredictorState(tif);
+                        ^
+/analysis/libtiff-src/libtiff/tif_predict.c:868:25: style: Variable 'sp' can be declared as pointer to const [constVariablePointer]
+    TIFFPredictorState *sp = PredictorState(tif);
+                        ^
+/analysis/libtiff-src/libtiff/tif_predict.c:951:51: style: Parameter 'bp' can be declared as pointer to const. However it seems that 'PredictorEncodeRow' is a callback function, if 'bp' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int PredictorEncodeRow(TIFF *tif, uint8_t *bp, tmsize_t cc, uint16_t s)
+                                                  ^
+/analysis/libtiff-src/libtiff/tif_predict.c:302:34: note: You might need to cast the function pointer here
+            tif->tif_encoderow = PredictorEncodeRow;
+                                 ^
+/analysis/libtiff-src/libtiff/tif_predict.c:951:51: note: Parameter 'bp' can be declared as pointer to const
+static int PredictorEncodeRow(TIFF *tif, uint8_t *bp, tmsize_t cc, uint16_t s)
+                                                  ^
+/analysis/libtiff-src/libtiff/tif_predict.c:987:52: style: Parameter 'bp0' can be declared as pointer to const. However it seems that 'PredictorEncodeTile' is a callback function, if 'bp0' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static int PredictorEncodeTile(TIFF *tif, uint8_t *bp0, tmsize_t cc0,
+                                                   ^
+/analysis/libtiff-src/libtiff/tif_predict.c:306:35: note: You might need to cast the function pointer here
+            tif->tif_encodetile = PredictorEncodeTile;
+                                  ^
+/analysis/libtiff-src/libtiff/tif_predict.c:987:52: note: Parameter 'bp0' can be declared as pointer to const
+static int PredictorEncodeTile(TIFF *tif, uint8_t *bp0, tmsize_t cc0,
+                                                   ^
+/analysis/libtiff-src/libtiff/tif_print.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+/analysis/libtiff-src/libtiff/tif_print.c:76:57: style: Parameter 'raw_data' can be declared as pointer to const [constParameterPointer]
+                            uint32_t value_count, void *raw_data)
+                                                        ^
+/analysis/libtiff-src/libtiff/tif_print.c:247:11: style: Variable 'sep' can be declared as pointer to const [constVariablePointer]
+    char *sep;
+          ^
+/analysis/libtiff-src/libtiff/tif_print.c:406:15: style: Variable 'cp' can be declared as pointer to const [constVariablePointer]
+        char *cp;
+              ^
+/analysis/libtiff-src/libtiff/tif_read.c:139:41: error: There is an unknown macro here somewhere. Configuration is required. If TIFF_SSIZE_FORMAT is a macro then please configure it. [unknownMacro]
+                              "; got %" TIFF_SSIZE_FORMAT " bytes, "
+                                        ^
+/analysis/libtiff-src/libtiff/tif_stream.cxx:117:28: style: C-style pointer casting [cstyleCast]
+        data->stream->read((char *)buf, request_size);
+                           ^
+/analysis/libtiff-src/libtiff/tif_strip.c:272:40: warning: Opposite inner 'if' condition leads to a dead code block. [oppositeInnerCondition]
+            if (td->td_samplesperpixel != 3)
+                                       ^
+/analysis/libtiff-src/libtiff/tif_strip.c:265:37: note: outer condition: td->td_samplesperpixel==3
+            (td->td_samplesperpixel == 3) && (!isUpSampled(tif)))
+                                    ^
+/analysis/libtiff-src/libtiff/tif_strip.c:272:40: note: opposite inner condition: td->td_samplesperpixel!=3
+            if (td->td_samplesperpixel != 3)
+                                       ^
+/analysis/libtiff-src/libtiff/tif_strip.c:67:20: style: Variable 'td' can be declared as pointer to const [constVariablePointer]
+    TIFFDirectory *td = &tif->tif_dir;
+                   ^
+/analysis/libtiff-src/libtiff/tif_strip.c:91:20: style: Variable 'td' can be declared as pointer to const [constVariablePointer]
+    TIFFDirectory *td = &tif->tif_dir;
+                   ^
+/analysis/libtiff-src/libtiff/tif_strip.c:198:20: style: Variable 'td' can be declared as pointer to const [constVariablePointer]
+    TIFFDirectory *td = &tif->tif_dir;
+                   ^
+/analysis/libtiff-src/libtiff/tif_strip.c:260:20: style: Variable 'td' can be declared as pointer to const [constVariablePointer]
+    TIFFDirectory *td = &tif->tif_dir;
+                   ^
+/analysis/libtiff-src/libtiff/tif_strip.c:360:20: style: Variable 'td' can be declared as pointer to const [constVariablePointer]
+    TIFFDirectory *td = &tif->tif_dir;
+                   ^
+/analysis/libtiff-src/libtiff/tif_swab.c:167:34: portability: inconclusive: Casting from float * to unsigned char * is not portable due to different binary data representations on different platforms. [invalidPointerCast]
+    register unsigned char *cp = (unsigned char *)fp;
+                                 ^
+/analysis/libtiff-src/libtiff/tif_swab.c:188:14: portability: inconclusive: Casting from float * to unsigned char * is not portable due to different binary data representations on different platforms. [invalidPointerCast]
+        cp = (unsigned char *)fp;
+             ^
+/analysis/libtiff-src/libtiff/tif_swab.c:203:34: portability: inconclusive: Casting from double * to unsigned char * is not portable due to different binary data representations on different platforms. [invalidPointerCast]
+    register unsigned char *cp = (unsigned char *)dp;
+                                 ^
+/analysis/libtiff-src/libtiff/tif_swab.c:230:14: portability: inconclusive: Casting from double * to unsigned char * is not portable due to different binary data representations on different platforms. [invalidPointerCast]
+        cp = (unsigned char *)dp;
+             ^
+/analysis/libtiff-src/libtiff/tif_swab.c:84:28: style: The scope of the variable 't' can be reduced. [variableScope]
+    register unsigned char t;
+                           ^
+/analysis/libtiff-src/libtiff/tif_swab.c:102:19: style: The scope of the variable 't' can be reduced. [variableScope]
+    unsigned char t;
+                  ^
+/analysis/libtiff-src/libtiff/tif_swab.c:120:28: style: The scope of the variable 't' can be reduced. [variableScope]
+    register unsigned char t;
+                           ^
+/analysis/libtiff-src/libtiff/tif_swab.c:141:28: style: The scope of the variable 't' can be reduced. [variableScope]
+    register unsigned char t;
+                           ^
+/analysis/libtiff-src/libtiff/tif_swab.c:183:28: style: The scope of the variable 't' can be reduced. [variableScope]
+    register unsigned char t;
+                           ^
+/analysis/libtiff-src/libtiff/tif_swab.c:225:28: style: The scope of the variable 't' can be reduced. [variableScope]
+    register unsigned char t;
+                           ^
+/analysis/libtiff-src/libtiff/tiffio.h:600:17: error: syntax error [syntaxError]
+    extern void TIFFSwabArrayOfDouble(double *dp, tmsize_t n);
+                ^
+/analysis/libtiff-src/libtiff/tiffio.h:599:17: error: syntax error [syntaxError]
+    extern void TIFFSwabArrayOfFloat(float *fp, tmsize_t n);
+                ^
+/analysis/libtiff-src/libtiff/tiffio.h:597:17: error: syntax error [syntaxError]
+    extern void TIFFSwabArrayOfLong(uint32_t *lp, tmsize_t n);
+                ^
+/analysis/libtiff-src/libtiff/tiffio.h:598:17: error: syntax error [syntaxError]
+    extern void TIFFSwabArrayOfLong8(uint64_t *lp, tmsize_t n);
+                ^
+/analysis/libtiff-src/libtiff/tiffio.h:595:17: error: syntax error [syntaxError]
+    extern void TIFFSwabArrayOfShort(uint16_t *wp, tmsize_t n);
+                ^
+/analysis/libtiff-src/libtiff/tiffio.h:596:17: error: syntax error [syntaxError]
+    extern void TIFFSwabArrayOfTriples(uint8_t *tp, tmsize_t n);
+                ^
+/analysis/libtiff-src/libtiff/tiffio.h:594:17: error: syntax error [syntaxError]
+    extern void TIFFSwabDouble(double *);
+                ^
+/analysis/libtiff-src/libtiff/tiffio.h:593:17: error: syntax error [syntaxError]
+    extern void TIFFSwabFloat(float *);
+                ^
+/analysis/libtiff-src/libtiff/tiffio.h:591:17: error: syntax error [syntaxError]
+    extern void TIFFSwabLong(uint32_t *);
+                ^
+/analysis/libtiff-src/libtiff/tiffio.h:592:17: error: syntax error [syntaxError]
+    extern void TIFFSwabLong8(uint64_t *);
+                ^
+/analysis/libtiff-src/libtiff/tiffio.h:590:17: error: syntax error [syntaxError]
+    extern void TIFFSwabShort(uint16_t *);
+                ^
+/analysis/libtiff-src/libtiff/tif_thunder.c:159:18: style: Variable 'op_end' can be declared as pointer to const [constVariablePointer]
+        uint8_t *op_end = op0 + (maxpixels + 1) / 2;
+                 ^
+/analysis/libtiff-src/libtiff/tif_tile.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+/analysis/libtiff-src/libtiff/tif_tile.c:38:20: style: Variable 'td' can be declared as pointer to const [constVariablePointer]
+    TIFFDirectory *td = &tif->tif_dir;
+                   ^
+/analysis/libtiff-src/libtiff/tif_tile.c:73:20: style: Variable 'td' can be declared as pointer to const [constVariablePointer]
+    TIFFDirectory *td = &tif->tif_dir;
+                   ^
+/analysis/libtiff-src/libtiff/tif_tile.c:110:20: style: Variable 'td' can be declared as pointer to const [constVariablePointer]
+    TIFFDirectory *td = &tif->tif_dir;
+                   ^
+/analysis/libtiff-src/libtiff/tif_tile.c:143:20: style: Variable 'td' can be declared as pointer to const [constVariablePointer]
+    TIFFDirectory *td = &tif->tif_dir;
+                   ^
+/analysis/libtiff-src/libtiff/tif_tile.c:191:20: style: Variable 'td' can be declared as pointer to const [constVariablePointer]
+    TIFFDirectory *td = &tif->tif_dir;
+                   ^
+/analysis/libtiff-src/libtiff/tif_unix.c:34:0: information: Include file: "tif_config.h" not found. [missingInclude]
+#include "tif_config.h"
+^
+/analysis/libtiff-src/libtiff/tif_unix.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+/analysis/libtiff-src/libtiff/tif_webp.c:34:0: information: Include file: "webp/decode.h" not found. [missingInclude]
+#include "webp/decode.h"
+^
+/analysis/libtiff-src/libtiff/tif_webp.c:35:0: information: Include file: "webp/encode.h" not found. [missingInclude]
+#include "webp/encode.h"
+^
+/analysis/libtiff-src/libtiff/tif_webp.c:88:50: error: There is an unknown macro here somewhere. Configuration is required. If TIFF_SIZE_FORMAT is a macro then please configure it. [unknownMacro]
+            tif, module, "Buffer too small by %" TIFF_SIZE_FORMAT " bytes.",
+                                                 ^
+/analysis/libtiff-src/libtiff/tif_write.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+/analysis/libtiff-src/libtiff/tif_zip.c:41:0: information: Include file: "zlib.h" not found. [missingInclude]
+#include "zlib.h"
+^
+/analysis/libtiff-src/libtiff/tif_zip.c:44:0: information: Include file: "libdeflate.h" not found. [missingInclude]
+#include "libdeflate.h"
+^
+/analysis/libtiff-src/libtiff/tif_zstd.c:35:0: information: Include file: "zstd.h" not found. [missingInclude]
+#include "zstd.h"
+^
+/analysis/libtiff-src/libtiff/tif_zstd.c:236:12: style: The scope of the variable 'zstd_ret' can be reduced. [variableScope]
+    size_t zstd_ret;
+           ^
+/analysis/libtiff-src/tools/fax2ps.c:24:0: information: Include file: "libport.h" not found. [missingInclude]
+#include "libport.h"
+^
+/analysis/libtiff-src/tools/fax2ps.c:25:0: information: Include file: "tif_config.h" not found. [missingInclude]
+#include "tif_config.h"
+^
+/analysis/libtiff-src/tools/fax2ps.c:45:0: information: Include file: "tiffio.h" not found. [missingInclude]
+#include "tiffio.h"
+^
+/analysis/libtiff-src/tools/fax2ps.c:46:0: information: Include file: "tiffiop.h" not found. [missingInclude]
+#include "tiffiop.h"
+^
+/analysis/libtiff-src/tools/fax2ps.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+/analysis/libtiff-src/tools/fax2ps.c:255:5: warning: %u in format string (no. 1) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+    printf("%%%%BoundingBox: 0 0 %u %u\n", (int)(pageWidth * points),
+    ^
+/analysis/libtiff-src/tools/fax2ps.c:255:5: warning: %u in format string (no. 2) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+    printf("%%%%BoundingBox: 0 0 %u %u\n", (int)(pageWidth * points),
+    ^
+/analysis/libtiff-src/tools/fax2ps.c:463:5: warning: %u in format string (no. 1) requires 'unsigned int' but the argument type is 'signed int'. [invalidPrintfArgType_uint]
+    printf("%%%%Pages: %u\n", totalPages);
+    ^
+/analysis/libtiff-src/tools/fax2ps.c:367:21: error: Common realloc mistake: 'pages' nulled but not freed upon failure [memleakOnRealloc]
+                    pages = (uint16_t *)realloc(pages, (npages + 1) *
+                    ^
+/analysis/libtiff-src/tools/fax2ps.c:91:9: style: The scope of the variable 'l' can be reduced. [variableScope]
+    int l;
+        ^
+/analysis/libtiff-src/tools/fax2ps.c:97:23: style: Checking if unsigned expression 'runlength' is less than zero. [unsignedLessThanZero]
+        if (runlength <= 0)
+                      ^
+/analysis/libtiff-src/tools/fax2ps.c:74:69: style: Parameter 'erun' can be declared as pointer to const. However it seems that 'printruns' is a callback function, if 'erun' is declared with const you might also need to cast function pointer(s). [constParameterCallback]
+static void printruns(unsigned char *buf, uint32_t *runs, uint32_t *erun,
+                                                                    ^
+/analysis/libtiff-src/tools/fax2ps.c:277:44: note: You might need to cast the function pointer here
+    TIFFSetField(tif, TIFFTAG_FAXFILLFUNC, printruns);
+                                           ^
+/analysis/libtiff-src/tools/fax2ps.c:74:69: note: Parameter 'erun' can be declared as pointer to const
+static void printruns(unsigned char *buf, uint32_t *runs, uint32_t *erun,
+                                                                    ^
+/analysis/libtiff-src/tools/fax2ps.c:85:18: style: Variable 'svalue' can be declared as pointer to const [constVariablePointer]
+    static char *svalue =
+                 ^
+/analysis/libtiff-src/tools/fax2ps.c:304:51: style: Parameter 'pages' can be declared as pointer to const [constParameterPointer]
+void fax2ps(TIFF *tif, uint16_t npages, uint16_t *pages, char *filename)
+                                                  ^
+/analysis/libtiff-src/tools/fax2ps.c:304:64: style: Parameter 'filename' can be declared as pointer to const [constParameterPointer]
+void fax2ps(TIFF *tif, uint16_t npages, uint16_t *pages, char *filename)
+                                                               ^
+/analysis/libtiff-src/tools/fax2tiff.c:28:0: information: Include file: "libport.h" not found. [missingInclude]
+#include "libport.h"
+^
+/analysis/libtiff-src/tools/fax2tiff.c:29:0: information: Include file: "tif_config.h" not found. [missingInclude]
+#include "tif_config.h"
+^
+/analysis/libtiff-src/tools/fax2tiff.c:46:0: information: Include file: "tiffiop.h" not found. [missingInclude]
+#include "tiffiop.h"
+^
+/analysis/libtiff-src/tools/fax2tiff.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+/analysis/libtiff-src/tools/fax2tiff.c:393:9: style: The scope of the variable 'ok' can be reduced. [variableScope]
+    int ok;
+        ^
+/analysis/libtiff-src/tools/fax2tiff.c:79:9: style: union member '_FAX_Client_Data::fd' is never used. [unusedStructMember]
+    int fd;       /* Integer file descriptor */
+        ^
+/analysis/libtiff-src/tools/mkg3states.c:30:0: information: Include file: "libport.h" not found. [missingInclude]
+#include "libport.h"
+^
+/analysis/libtiff-src/tools/mkg3states.c:31:0: information: Include file: "tif_config.h" not found. [missingInclude]
+#include "tif_config.h"
+^
+/analysis/libtiff-src/tools/mkg3states.c:41:0: information: Include file: "tif_fax3.h" not found. [missingInclude]
+#include "tif_fax3.h"
+^
+/analysis/libtiff-src/tools/mkg3states.c:162:11: style: Variable 'sep' can be declared as pointer to const [constVariablePointer]
+    char *sep;
+          ^
+/analysis/libtiff-src/tools/mkg3states.c:201:11: style: Variable 'outputfile' can be declared as pointer to const [constVariablePointer]
+    char *outputfile;
+          ^
+/analysis/libtiff-src/tools/pal2rgb.c:25:0: information: Include file: "libport.h" not found. [missingInclude]
+#include "libport.h"
+^
+/analysis/libtiff-src/tools/pal2rgb.c:26:0: information: Include file: "tif_config.h" not found. [missingInclude]
+#include "tif_config.h"
+^
+/analysis/libtiff-src/tools/pal2rgb.c:37:0: information: Include file: "tiffio.h" not found. [missingInclude]
+#include "tiffio.h"
+^
+/analysis/libtiff-src/tools/pal2rgb.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+/analysis/libtiff-src/tools/pal2rgb.c:463:22: style: Local variable 'compression' shadows outer variable [shadowVariable]
+            uint16_t compression;
+                     ^
+/analysis/libtiff-src/tools/pal2rgb.c:68:17: note: Shadowed declaration
+static uint16_t compression = (uint16_t)-1;
+                ^
+/analysis/libtiff-src/tools/pal2rgb.c:463:22: note: Shadow variable
+            uint16_t compression;
+                     ^
+/analysis/libtiff-src/tools/pal2rgb.c:470:22: style: Local variable 'compression' shadows outer variable [shadowVariable]
+            uint16_t compression;
+                     ^
+/analysis/libtiff-src/tools/pal2rgb.c:68:17: note: Shadowed declaration
+static uint16_t compression = (uint16_t)-1;
+                ^
+/analysis/libtiff-src/tools/pal2rgb.c:470:22: note: Shadow variable
+            uint16_t compression;
+                     ^
+/analysis/libtiff-src/tools/pal2rgb.c:269:41: style: Parameter 'opt' can be declared as pointer to const [constParameterPointer]
+static int processCompressOptions(char *opt)
+                                        ^
+/analysis/libtiff-src/tools/pal2rgb.c:277:15: style: Variable 'cp' can be declared as pointer to const [constVariablePointer]
+        char *cp = strchr(opt, ':');
+              ^
+/analysis/libtiff-src/tools/pal2rgb.c:294:15: style: Variable 'cp' can be declared as pointer to const [constVariablePointer]
+        char *cp = strchr(opt, ':');
+              ^
+/analysis/libtiff-src/tools/pal2rgb.c:301:15: style: Variable 'cp' can be declared as pointer to const [constVariablePointer]
+        char *cp = strchr(opt, ':');
+              ^
+/analysis/libtiff-src/tools/ppm2tiff.c:25:0: information: Include file: "libport.h" not found. [missingInclude]
+#include "libport.h"
+^
+/analysis/libtiff-src/tools/ppm2tiff.c:26:0: information: Include file: "tif_config.h" not found. [missingInclude]
+#include "tif_config.h"
+^
+/analysis/libtiff-src/tools/ppm2tiff.c:45:0: information: Include file: "tiffio.h" not found. [missingInclude]
+#include "tiffio.h"
+^
+/analysis/libtiff-src/tools/ppm2tiff.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+/analysis/libtiff-src/tools/ppm2tiff.c:77:19: style: The scope of the variable 'h' can be reduced. [variableScope]
+    unsigned char h;
+                  ^
+/analysis/libtiff-src/tools/ppm2tiff.c:78:19: style: The scope of the variable 'l' can be reduced. [variableScope]
+    unsigned char l;
+                  ^
+/analysis/libtiff-src/tools/ppm2tiff.c:163:26: style: Parameter 'file' can be declared as pointer to const [constParameterPointer]
+static void BadPPM(char *file)
+                         ^
+/analysis/libtiff-src/tools/ppm2tiff.c:483:15: style: Variable 'cp' can be declared as pointer to const [constVariablePointer]
+        char *cp = strchr(opt, ':');
+              ^
+/analysis/libtiff-src/tools/ppm2tiff.c:509:15: style: Variable 'cp' can be declared as pointer to const [constVariablePointer]
+        char *cp = strchr(opt, ':');
+              ^
+/analysis/libtiff-src/tools/ppm2tiff.c:516:15: style: Variable 'cp' can be declared as pointer to const [constVariablePointer]
+        char *cp = strchr(opt, ':');
+              ^
+/analysis/libtiff-src/tools/raw2tiff.c:29:0: information: Include file: "libport.h" not found. [missingInclude]
+#include "libport.h"
+^
+/analysis/libtiff-src/tools/raw2tiff.c:30:0: information: Include file: "tif_config.h" not found. [missingInclude]
+#include "tif_config.h"
+^
+/analysis/libtiff-src/tools/raw2tiff.c:56:0: information: Include file: "tiffio.h" not found. [missingInclude]
+#include "tiffio.h"
+^
+/analysis/libtiff-src/tools/raw2tiff.c:57:0: information: Include file: "tiffiop.h" not found. [missingInclude]
+#include "tiffiop.h"
+^
+/analysis/libtiff-src/tools/raw2tiff.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+/analysis/libtiff-src/tools/raw2tiff.c:431:14: style: The scope of the variable 'w' can be reduced. [variableScope]
+    uint32_t w, h, scanlinesize, imagesize;
+             ^
+/analysis/libtiff-src/tools/raw2tiff.c:431:17: style: The scope of the variable 'h' can be reduced. [variableScope]
+    uint32_t w, h, scanlinesize, imagesize;
+                ^
+/analysis/libtiff-src/tools/raw2tiff.c:431:20: style: The scope of the variable 'scanlinesize' can be reduced. [variableScope]
+    uint32_t w, h, scanlinesize, imagesize;
+                   ^
+/analysis/libtiff-src/tools/raw2tiff.c:433:12: style: The scope of the variable 'cor_coef' can be reduced. [variableScope]
+    double cor_coef = 0, tmp;
+           ^
+/analysis/libtiff-src/tools/raw2tiff.c:433:26: style: The scope of the variable 'tmp' can be reduced. [variableScope]
+    double cor_coef = 0, tmp;
+                         ^
+/analysis/libtiff-src/tools/raw2tiff.c:676:41: style: Parameter 'opt' can be declared as pointer to const [constParameterPointer]
+static int processCompressOptions(char *opt)
+                                        ^
+/analysis/libtiff-src/tools/raw2tiff.c:684:15: style: Variable 'cp' can be declared as pointer to const [constVariablePointer]
+        char *cp = strchr(opt, ':');
+              ^
+/analysis/libtiff-src/tools/raw2tiff.c:701:15: style: Variable 'cp' can be declared as pointer to const [constVariablePointer]
+        char *cp = strchr(opt, ':');
+              ^
+/analysis/libtiff-src/tools/raw2tiff.c:708:15: style: Variable 'cp' can be declared as pointer to const [constVariablePointer]
+        char *cp = strchr(opt, ':');
+              ^
+/analysis/libtiff-src/tools/rgb2ycbcr.c:25:0: information: Include file: "libport.h" not found. [missingInclude]
+#include "libport.h"
+^
+/analysis/libtiff-src/tools/rgb2ycbcr.c:26:0: information: Include file: "tif_config.h" not found. [missingInclude]
+#include "tif_config.h"
+^
+/analysis/libtiff-src/tools/rgb2ycbcr.c:36:0: information: Include file: "tiffio.h" not found. [missingInclude]
+#include "tiffio.h"
+^
+/analysis/libtiff-src/tools/rgb2ycbcr.c:37:0: information: Include file: "tiffiop.h" not found. [missingInclude]
+#include "tiffiop.h"
+^
+/analysis/libtiff-src/tools/rgb2ycbcr.c:328:50: error: There is an unknown macro here somewhere. Configuration is required. If TIFF_SIZE_FORMAT is a macro then please configure it. [unknownMacro]
+                  "Failed to allocate buffer (%" TIFF_SIZE_FORMAT
+                                                 ^
+/analysis/libtiff-src/tools/thumbnail.c:25:0: information: Include file: "libport.h" not found. [missingInclude]
+#include "libport.h"
+^
+/analysis/libtiff-src/tools/thumbnail.c:26:0: information: Include file: "tif_config.h" not found. [missingInclude]
+#include "tif_config.h"
+^
+/analysis/libtiff-src/tools/thumbnail.c:37:0: information: Include file: "tiffio.h" not found. [missingInclude]
+#include "tiffio.h"
+^
+/analysis/libtiff-src/tools/thumbnail.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+/analysis/libtiff-src/tools/thumbnail.c:127:12: style: Condition 'in!=NULL' is always true [knownConditionTrueFalse]
+    if (in != NULL)
+           ^
+/analysis/libtiff-src/tools/thumbnail.c:629:13: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+            fprintf(stderr, "acc=%d, area=%d\n", acc, area);
+            ^
+/analysis/libtiff-src/tools/thumbnail.c:629:13: warning: %d in format string (no. 2) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+            fprintf(stderr, "acc=%d, area=%d\n", acc, area);
+            ^
+/analysis/libtiff-src/tools/thumbnail.c:553:13: style: The scope of the variable 'fw' can be reduced. [variableScope]
+        int fw;
+            ^
+/analysis/libtiff-src/tools/thumbnail.c:554:17: style: The scope of the variable 'b' can be reduced. [variableScope]
+        uint8_t b;
+                ^
+/analysis/libtiff-src/tools/tiff2bw.c:25:0: information: Include file: "libport.h" not found. [missingInclude]
+#include "libport.h"
+^
+/analysis/libtiff-src/tools/tiff2bw.c:26:0: information: Include file: "tif_config.h" not found. [missingInclude]
+#include "tif_config.h"
+^
+/analysis/libtiff-src/tools/tiff2bw.c:37:0: information: Include file: "tiffio.h" not found. [missingInclude]
+#include "tiffio.h"
+^
+/analysis/libtiff-src/tools/tiff2bw.c:38:0: information: Include file: "tiffiop.h" not found. [missingInclude]
+#include "tiffiop.h"
+^
+/analysis/libtiff-src/tools/tiff2bw.c:58:18: style: The scope of the variable 'v' can be reduced. [variableScope]
+    register int v, red = RED, green = GREEN, blue = BLUE;
+                 ^
+/analysis/libtiff-src/tools/tiff2bw.c:92:18: style: The scope of the variable 'v' can be reduced. [variableScope]
+    register int v, red = RED, green = GREEN, blue = BLUE;
+                 ^
+/analysis/libtiff-src/tools/tiff2bw.c:525:22: style: Local variable 'compression' shadows outer variable [shadowVariable]
+            uint16_t compression;
+                     ^
+/analysis/libtiff-src/tools/tiff2bw.c:104:17: note: Shadowed declaration
+static uint16_t compression = (uint16_t)-1;
+                ^
+/analysis/libtiff-src/tools/tiff2bw.c:525:22: note: Shadow variable
+            uint16_t compression;
+                     ^
+/analysis/libtiff-src/tools/tiff2bw.c:532:22: style: Local variable 'compression' shadows outer variable [shadowVariable]
+            uint16_t compression;
+                     ^
+/analysis/libtiff-src/tools/tiff2bw.c:104:17: note: Shadowed declaration
+static uint16_t compression = (uint16_t)-1;
+                ^
+/analysis/libtiff-src/tools/tiff2bw.c:532:22: note: Shadow variable
+            uint16_t compression;
+                     ^
+/analysis/libtiff-src/tools/tiff2bw.c:89:64: style: Parameter 'data' can be declared as pointer to const [constParameterPointer]
+static void compresspalette(unsigned char *out, unsigned char *data, uint32_t n,
+                                                               ^
+/analysis/libtiff-src/tools/tiff2bw.c:90:39: style: Parameter 'rmap' can be declared as pointer to const [constParameterPointer]
+                            uint16_t *rmap, uint16_t *gmap, uint16_t *bmap)
+                                      ^
+/analysis/libtiff-src/tools/tiff2bw.c:90:55: style: Parameter 'gmap' can be declared as pointer to const [constParameterPointer]
+                            uint16_t *rmap, uint16_t *gmap, uint16_t *bmap)
+                                                      ^
+/analysis/libtiff-src/tools/tiff2bw.c:90:71: style: Parameter 'bmap' can be declared as pointer to const [constParameterPointer]
+                            uint16_t *rmap, uint16_t *gmap, uint16_t *bmap)
+                                                                      ^
+/analysis/libtiff-src/tools/tiff2bw.c:353:15: style: Variable 'cp' can be declared as pointer to const [constVariablePointer]
+        char *cp = strchr(opt, ':');
+              ^
+/analysis/libtiff-src/tools/tiff2bw.c:370:15: style: Variable 'cp' can be declared as pointer to const [constVariablePointer]
+        char *cp = strchr(opt, ':');
+              ^
+/analysis/libtiff-src/tools/tiff2bw.c:377:15: style: Variable 'cp' can be declared as pointer to const [constVariablePointer]
+        char *cp = strchr(opt, ':');
+              ^
+/analysis/libtiff-src/tools/tiff2pdf.c:47:0: information: Include file: "libport.h" not found. [missingInclude]
+#include "libport.h"
+^
+/analysis/libtiff-src/tools/tiff2pdf.c:48:0: information: Include file: "tif_config.h" not found. [missingInclude]
+#include "tif_config.h"
+^
+/analysis/libtiff-src/tools/tiff2pdf.c:49:0: information: Include file: "tiffio.h" not found. [missingInclude]
+#include "tiffio.h"
+^
+/analysis/libtiff-src/tools/tiff2pdf.c:50:0: information: Include file: "tiffiop.h" not found. [missingInclude]
+#include "tiffiop.h"
+^
+/analysis/libtiff-src/tools/tiff2pdf.c:304:5: error: There is an unknown macro here somewhere. Configuration is required. If SIZEOF_SIZE_T is a macro then please configure it. [unknownMacro]
+    SIZEOF_SIZE_T
+    ^
+/analysis/libtiff-src/tools/tiff2pdf.c:1060:38: error: There is an unknown macro here somewhere. Configuration is required. If TIFF_SIZE_FORMAT is a macro then please configure it. [unknownMacro]
+                  "Can't allocate %" TIFF_SIZE_FORMAT
+                                     ^
+/analysis/libtiff-src/tools/tiff2ps.c:25:0: information: Include file: "libport.h" not found. [missingInclude]
+#include "libport.h"
+^
+/analysis/libtiff-src/tools/tiff2ps.c:26:0: information: Include file: "tif_config.h" not found. [missingInclude]
+#include "tif_config.h"
+^
+/analysis/libtiff-src/tools/tiff2ps.c:38:0: information: Include file: "tiffio.h" not found. [missingInclude]
+#include "tiffio.h"
+^
+/analysis/libtiff-src/tools/tiff2ps.c:258:53: error: There is an unknown macro here somewhere. Configuration is required. If TIFF_SSIZE_FORMAT is a macro then please configure it. [unknownMacro]
+                "MemoryLimitError: allocation of %" TIFF_SSIZE_FORMAT
+                                                    ^
+/analysis/libtiff-src/tools/tiff2rgba.c:25:0: information: Include file: "libport.h" not found. [missingInclude]
+#include "libport.h"
+^
+/analysis/libtiff-src/tools/tiff2rgba.c:26:0: information: Include file: "tif_config.h" not found. [missingInclude]
+#include "tif_config.h"
+^
+/analysis/libtiff-src/tools/tiff2rgba.c:36:0: information: Include file: "tiffio.h" not found. [missingInclude]
+#include "tiffio.h"
+^
+/analysis/libtiff-src/tools/tiff2rgba.c:37:0: information: Include file: "tiffiop.h" not found. [missingInclude]
+#include "tiffiop.h"
+^
+/analysis/libtiff-src/tools/tiff2rgba.c:447:35: error: There is an unknown macro here somewhere. Configuration is required. If TIFF_SIZE_FORMAT is a macro then please configure it. [unknownMacro]
+                  "Raster size %" TIFF_SIZE_FORMAT
+                                  ^
+/analysis/libtiff-src/tools/tiffcmp.c:25:0: information: Include file: "libport.h" not found. [missingInclude]
+#include "libport.h"
+^
+/analysis/libtiff-src/tools/tiffcmp.c:26:0: information: Include file: "tif_config.h" not found. [missingInclude]
+#include "tif_config.h"
+^
+/analysis/libtiff-src/tools/tiffcmp.c:37:0: information: Include file: "tiffio.h" not found. [missingInclude]
+#include "tiffio.h"
+^
+/analysis/libtiff-src/tools/tiffcmp.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+/analysis/libtiff-src/tools/tiffcmp.c:216:66: style: Condition 'SeparateCompare(1,s,row,buf2,buf1)<0' is always false [knownConditionTrueFalse]
+                                                           buf1) < 0) goto bad1;
+                                                                 ^
+/analysis/libtiff-src/tools/tiffcmp.c:214:71: note: Calling function 'SeparateCompare' returns 0
+                            checkEOF(tif1, row, s) if (SeparateCompare(
+                                                                      ^
+/analysis/libtiff-src/tools/tiffcmp.c:216:66: note: Condition 'SeparateCompare(1,s,row,buf2,buf1)<0' is always false
+                                                           buf1) < 0) goto bad1;
+                                                                 ^
+/analysis/libtiff-src/tools/tiffcmp.c:230:66: style: Condition 'SeparateCompare(0,s,row,buf1,buf2)<0' is always false [knownConditionTrueFalse]
+                                                           buf2) < 0) goto bad1;
+                                                                 ^
+/analysis/libtiff-src/tools/tiffcmp.c:228:71: note: Calling function 'SeparateCompare' returns 0
+                            checkEOF(tif2, row, s) if (SeparateCompare(
+                                                                      ^
+/analysis/libtiff-src/tools/tiffcmp.c:230:66: note: Condition 'SeparateCompare(0,s,row,buf1,buf2)<0' is always false
+                                                           buf2) < 0) goto bad1;
+                                                                 ^
+/analysis/libtiff-src/tools/tiffcmp.c:448:31: portability: Casting between unsigned char * and float * which have an incompatible binary data representation. [invalidPointerCast]
+                float *pix1 = (float *)p1, *pix2 = (float *)p2;
+                              ^
+/analysis/libtiff-src/tools/tiffcmp.c:585:60: style: Parameter 'name' can be declared as pointer to const [constParameterPointer]
+static int checkTag(TIFF *tif1, TIFF *tif2, int tag, char *name, void *p1,
+                                                           ^
+/analysis/libtiff-src/tools/tiffcmp.c:625:66: style: Parameter 'name' can be declared as pointer to const [constParameterPointer]
+static int CheckShort2Tag(TIFF *tif1, TIFF *tif2, int tag, char *name)
+                                                                 ^
+/analysis/libtiff-src/tools/tiffcmp.c:648:70: style: Parameter 'name' can be declared as pointer to const [constParameterPointer]
+static int CheckShortArrayTag(TIFF *tif1, TIFF *tif2, int tag, char *name)
+                                                                     ^
+/analysis/libtiff-src/tools/tiffcmp.c:662:19: style: Variable 'sep' can be declared as pointer to const [constVariablePointer]
+            char *sep;
+                  ^
+/analysis/libtiff-src/tools/tiffcp.c:39:0: information: Include file: "libport.h" not found. [missingInclude]
+#include "libport.h"
+^
+/analysis/libtiff-src/tools/tiffcp.c:40:0: information: Include file: "tif_config.h" not found. [missingInclude]
+#include "tif_config.h"
+^
+/analysis/libtiff-src/tools/tiffcp.c:53:0: information: Include file: "tiffio.h" not found. [missingInclude]
+#include "tiffio.h"
+^
+/analysis/libtiff-src/tools/tiffcp.c:1752:5: error: There is an unknown macro here somewhere. Configuration is required. If SIZEOF_SIZE_T is a macro then please configure it. [unknownMacro]
+    SIZEOF_SIZE_T
+    ^
+/analysis/libtiff-src/tools/tiffcp.c:113:53: error: There is an unknown macro here somewhere. Configuration is required. If TIFF_SSIZE_FORMAT is a macro then please configure it. [unknownMacro]
+                "MemoryLimitError: allocation of %" TIFF_SSIZE_FORMAT
+                                                    ^
+/analysis/libtiff-src/tools/tiffcrop.c:130:0: information: Include file: "libport.h" not found. [missingInclude]
+#include "libport.h"
+^
+/analysis/libtiff-src/tools/tiffcrop.c:131:0: information: Include file: "tif_config.h" not found. [missingInclude]
+#include "tif_config.h"
+^
+/analysis/libtiff-src/tools/tiffcrop.c:132:0: information: Include file: "tiffiop.h" not found. [missingInclude]
+#include "tiffiop.h"
+^
+/analysis/libtiff-src/tools/tiffcrop.c:155:0: information: Include file: "tiffio.h" not found. [missingInclude]
+#include "tiffio.h"
+^
+/analysis/libtiff-src/tools/tiffcrop.c:1021:54: error: There is an unknown macro here somewhere. Configuration is required. If TIFF_SSIZE_FORMAT is a macro then please configure it. [unknownMacro]
+                          " col %" PRIu32 ", Read %" TIFF_SSIZE_FORMAT
+                                                     ^
+/analysis/libtiff-src/tools/tiffdither.c:25:0: information: Include file: "libport.h" not found. [missingInclude]
+#include "libport.h"
+^
+/analysis/libtiff-src/tools/tiffdither.c:26:0: information: Include file: "tif_config.h" not found. [missingInclude]
+#include "tif_config.h"
+^
+/analysis/libtiff-src/tools/tiffdither.c:36:0: information: Include file: "tiffio.h" not found. [missingInclude]
+#include "tiffio.h"
+^
+/analysis/libtiff-src/tools/tiffdither.c:37:0: information: Include file: "tiffiop.h" not found. [missingInclude]
+#include "tiffiop.h"
+^
+/analysis/libtiff-src/tools/tiffdither.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+/analysis/libtiff-src/tools/tiffdither.c:65:42: style: Variable 'inptr' can be declared as pointer to const [constVariablePointer]
+    unsigned char *outline, *inputline, *inptr;
+                                         ^
+/analysis/libtiff-src/tools/tiffdither.c:207:15: style: Variable 'cp' can be declared as pointer to const [constVariablePointer]
+        char *cp = strchr(opt, ':');
+              ^
+/analysis/libtiff-src/tools/tiffdither.c:214:15: style: Variable 'cp' can be declared as pointer to const [constVariablePointer]
+        char *cp = strchr(opt, ':');
+              ^
+/analysis/libtiff-src/tools/tiffdump.c:25:0: information: Include file: "libport.h" not found. [missingInclude]
+#include "libport.h"
+^
+/analysis/libtiff-src/tools/tiffdump.c:26:0: information: Include file: "tif_config.h" not found. [missingInclude]
+#include "tif_config.h"
+^
+/analysis/libtiff-src/tools/tiffdump.c:37:0: information: Include file: "tiffiop.h" not found. [missingInclude]
+#include "tiffiop.h"
+^
+/analysis/libtiff-src/tools/tiffdump.c:51:0: information: Include file: "tiffio.h" not found. [missingInclude]
+#include "tiffio.h"
+^
+/analysis/libtiff-src/tools/tiffdump.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+/analysis/libtiff-src/tools/tiffdump.c:120:32: style: Condition '*(char*)&one==0' is always false [knownConditionTrueFalse]
+    bigendian = (*(char *)&one == 0);
+                               ^
+/analysis/libtiff-src/tools/tiffdump.c:115:15: note: Assignment 'one=1', assigned value is 1
+    int one = 1, fd;
+              ^
+/analysis/libtiff-src/tools/tiffdump.c:120:32: note: Condition '*(char*)&one==0' is always false
+    bigendian = (*(char *)&one == 0);
+                               ^
+/analysis/libtiff-src/tools/tiffdump.c:260:17: error: Common realloc mistake: 'visited_diroff' nulled but not freed upon failure [memleakOnRealloc]
+                visited_diroff =
+                ^
+/analysis/libtiff-src/tools/tiffdump.c:831:25: portability: Casting between unsigned char * and float * which have an incompatible binary data representation. [invalidPointerCast]
+            float *fp = (float *)data;
+                        ^
+/analysis/libtiff-src/tools/tiffdump.c:838:26: portability: Casting between unsigned char * and double * which have an incompatible binary data representation. [invalidPointerCast]
+            double *dp = (double *)data;
+                         ^
+/analysis/libtiff-src/tools/tiffdump.c:860:21: style: Variable 'sep' is reassigned a value before the old one has been used. [redundantAssignment]
+                sep = " ";
+                    ^
+/analysis/libtiff-src/tools/tiffdump.c:859:21: note: sep is assigned
+                sep = " ";
+                    ^
+/analysis/libtiff-src/tools/tiffdump.c:860:21: note: sep is overwritten
+                sep = " ";
+                    ^
+/analysis/libtiff-src/tools/tiffdump.c:115:18: style: The scope of the variable 'fd' can be reduced. [variableScope]
+    int one = 1, fd;
+                 ^
+/analysis/libtiff-src/tools/tiffdump.c:718:11: style: Variable 'sep' can be declared as pointer to const [constVariablePointer]
+    char *sep = "";
+          ^
+/analysis/libtiff-src/tools/tiffdump.c:739:23: style: Variable 'wp' can be declared as pointer to const [constVariablePointer]
+            uint16_t *wp = (uint16_t *)data;
+                      ^
+/analysis/libtiff-src/tools/tiffdump.c:747:22: style: Variable 'wp' can be declared as pointer to const [constVariablePointer]
+            int16_t *wp = (int16_t *)data;
+                     ^
+/analysis/libtiff-src/tools/tiffdump.c:755:23: style: Variable 'lp' can be declared as pointer to const [constVariablePointer]
+            uint32_t *lp = (uint32_t *)data;
+                      ^
+/analysis/libtiff-src/tools/tiffdump.c:765:22: style: Variable 'lp' can be declared as pointer to const [constVariablePointer]
+            int32_t *lp = (int32_t *)data;
+                     ^
+/analysis/libtiff-src/tools/tiffdump.c:831:20: style: Variable 'fp' can be declared as pointer to const [constVariablePointer]
+            float *fp = (float *)data;
+                   ^
+/analysis/libtiff-src/tools/tiffdump.c:838:21: style: Variable 'dp' can be declared as pointer to const [constVariablePointer]
+            double *dp = (double *)data;
+                    ^
+/analysis/libtiff-src/tools/tiffdump.c:845:23: style: Variable 'lp' can be declared as pointer to const [constVariablePointer]
+            uint32_t *lp = (uint32_t *)data;
+                      ^
+/analysis/libtiff-src/tools/tiffdump.c:855:23: style: Variable 'llp' can be declared as pointer to const [constVariablePointer]
+            uint64_t *llp = (uint64_t *)data;
+                      ^
+/analysis/libtiff-src/tools/tiffgt.c:26:0: information: Include file: "libport.h" not found. [missingInclude]
+#include "libport.h"
+^
+/analysis/libtiff-src/tools/tiffgt.c:27:0: information: Include file: "tif_config.h" not found. [missingInclude]
+#include "tif_config.h"
+^
+/analysis/libtiff-src/tools/tiffgt.c:50:0: information: Include file: "tiffio.h" not found. [missingInclude]
+#include "tiffio.h"
+^
+/analysis/libtiff-src/tools/tiffgt.c:51:0: information: Include file: "tiffiop.h" not found. [missingInclude]
+#include "tiffiop.h"
+^
+/analysis/libtiff-src/tools/tiffgt.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+/analysis/libtiff-src/tools/tiffinfo.c:25:0: information: Include file: "libport.h" not found. [missingInclude]
+#include "libport.h"
+^
+/analysis/libtiff-src/tools/tiffinfo.c:26:0: information: Include file: "tif_config.h" not found. [missingInclude]
+#include "tif_config.h"
+^
+/analysis/libtiff-src/tools/tiffinfo.c:40:0: information: Include file: "tiffiop.h" not found. [missingInclude]
+#include "tiffiop.h"
+^
+/analysis/libtiff-src/tools/tiffinfo.c:332:47: error: There is an unknown macro here somewhere. Configuration is required. If TIFF_SSIZE_FORMAT is a macro then please configure it. [unknownMacro]
+                "Memory allocation attempt %" TIFF_SSIZE_FORMAT
+                                              ^
+/analysis/libtiff-src/tools/tiffmedian.c:41:0: information: Include file: "libport.h" not found. [missingInclude]
+#include "libport.h"
+^
+/analysis/libtiff-src/tools/tiffmedian.c:42:0: information: Include file: "tif_config.h" not found. [missingInclude]
+#include "tif_config.h"
+^
+/analysis/libtiff-src/tools/tiffmedian.c:52:0: information: Include file: "tiffio.h" not found. [missingInclude]
+#include "tiffio.h"
+^
+/analysis/libtiff-src/tools/tiffmedian.c:0:0: information: Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches. [normalCheckLevelMaxBranches]
+
+^
+/analysis/libtiff-src/tools/tiffmedian.c:399:29: style: The scope of the variable 'inptr' can be reduced. [variableScope]
+    register unsigned char *inptr;
+                            ^
+/analysis/libtiff-src/tools/tiffmedian.c:850:29: style: The scope of the variable 'outptr' can be reduced. [variableScope]
+    register unsigned char *outptr, *inptr;
+                            ^
+/analysis/libtiff-src/tools/tiffmedian.c:850:38: style: The scope of the variable 'inptr' can be reduced. [variableScope]
+    register unsigned char *outptr, *inptr;
+                                     ^
+/analysis/libtiff-src/tools/tiffmedian.c:950:30: style: The scope of the variable 'cj' can be reduced. [variableScope]
+                register int cj, tmp, d2, dist;
+                             ^
+/analysis/libtiff-src/tools/tiffmedian.c:950:34: style: The scope of the variable 'tmp' can be reduced. [variableScope]
+                register int cj, tmp, d2, dist;
+                                 ^
+/analysis/libtiff-src/tools/tiffmedian.c:950:39: style: The scope of the variable 'd2' can be reduced. [variableScope]
+                register int cj, tmp, d2, dist;
+                                      ^
+/analysis/libtiff-src/tools/tiffmedian.c:390:11: style: Local variable 'out' shadows outer variable [shadowVariable]
+    FILE *out = (code == EXIT_SUCCESS) ? stdout : stderr;
+          ^
+/analysis/libtiff-src/tools/tiffmedian.c:98:19: note: Shadowed declaration
+static TIFF *in, *out;
+                  ^
+/analysis/libtiff-src/tools/tiffmedian.c:390:11: note: Shadow variable
+    FILE *out = (code == EXIT_SUCCESS) ? stdout : stderr;
+          ^
+/analysis/libtiff-src/tools/tiffmedian.c:335:41: style: Parameter 'opt' can be declared as pointer to const [constParameterPointer]
+static int processCompressOptions(char *opt)
+                                        ^
+/analysis/libtiff-src/tools/tiffmedian.c:343:15: style: Variable 'cp' can be declared as pointer to const [constVariablePointer]
+        char *cp = strchr(opt, ':');
+              ^
+/analysis/libtiff-src/tools/tiffmedian.c:350:15: style: Variable 'cp' can be declared as pointer to const [constVariablePointer]
+        char *cp = strchr(opt, ':');
+              ^
+/analysis/libtiff-src/tools/tiffmedian.c:912:42: style: Variable 'inptr' can be declared as pointer to const [constVariablePointer]
+    unsigned char *outline, *inputline, *inptr;
+                                         ^
+/analysis/libtiff-src/tools/tiffset.c:30:0: information: Include file: "tif_config.h" not found. [missingInclude]
+#include "tif_config.h"
+^
+/analysis/libtiff-src/tools/tiffset.c:36:0: information: Include file: "tiffio.h" not found. [missingInclude]
+#include "tiffio.h"
+^
+/analysis/libtiff-src/tools/tiffset.c:125:53: error: There is an unknown macro here somewhere. Configuration is required. If TIFF_SSIZE_FORMAT is a macro then please configure it. [unknownMacro]
+                "MemoryLimitError: allocation of %" TIFF_SSIZE_FORMAT
+                                                    ^
+/analysis/libtiff-src/tools/tiffset.c:39:0: information: Include file: "libport.h" not found. [missingInclude]
+#include "libport.h"
+^
+/analysis/libtiff-src/tools/tiffsplit.c:25:0: information: Include file: "libport.h" not found. [missingInclude]
+#include "libport.h"
+^
+/analysis/libtiff-src/tools/tiffsplit.c:26:0: information: Include file: "tif_config.h" not found. [missingInclude]
+#include "tif_config.h"
+^
+/analysis/libtiff-src/tools/tiffsplit.c:32:0: information: Include file: "tiffio.h" not found. [missingInclude]
+#include "tiffio.h"
+^
+/analysis/libtiff-src/tools/tiffsplit.c:80:53: error: There is an unknown macro here somewhere. Configuration is required. If TIFF_SSIZE_FORMAT is a macro then please configure it. [unknownMacro]
+                "MemoryLimitError: allocation of %" TIFF_SSIZE_FORMAT
+                                                    ^
+/analysis/libtiff-src/libtiff/tif_hash_set.c:310:0: style: The function 'TIFFHashSetClear' is never used. [unusedFunction]
+void TIFFHashSetClear(TIFFHashSet *set)
+^
+/analysis/libtiff-src/libtiff/tif_hash_set.c:341:0: style: The function 'TIFFHashSetForeach' is never used. [unusedFunction]
+void TIFFHashSetForeach(TIFFHashSet *set, TIFFHashSetIterEltFunc fnIterFunc,
+^
+/analysis/libtiff-src/libtiff/tif_hash_set.c:440:0: style: The function 'TIFFHashSetInsert' is never used. [unusedFunction]
+bool TIFFHashSetInsert(TIFFHashSet *set, void *elt)
+^
+/analysis/libtiff-src/libtiff/tif_hash_set.c:502:0: style: The function 'TIFFHashSetLookup' is never used. [unusedFunction]
+void *TIFFHashSetLookup(TIFFHashSet *set, const void *elt)
+^
+/analysis/libtiff-src/libtiff/tif_hash_set.c:138:0: style: The function 'TIFFHashSetNew' is never used. [unusedFunction]
+TIFFHashSet *TIFFHashSetNew(TIFFHashSetHashFunc fnHashFunc,
+^
+/analysis/libtiff-src/libtiff/tif_hash_set.c:577:0: style: The function 'TIFFHashSetRemove' is never used. [unusedFunction]
+bool TIFFHashSetRemove(TIFFHashSet *set, const void *elt)
+^
+/analysis/libtiff-src/libtiff/tif_hash_set.c:599:0: style: The function 'TIFFHashSetRemoveDeferRehash' is never used. [unusedFunction]
+bool TIFFHashSetRemoveDeferRehash(TIFFHashSet *set, const void *elt)
+^
+/analysis/libtiff-src/libtiff/tif_hash_set.c:180:0: style: The function 'TIFFHashSetSize' is never used. [unusedFunction]
+int TIFFHashSetSize(const TIFFHashSet *set)
+^
+/analysis/libtiff-src/libtiff/tif_jpeg.c:2840:0: style: The function 'TIFFInitJPEG_12' is never used. [unusedFunction]
+int TIFFInitJPEG(TIFF *tif, int scheme)
+^
+/analysis/libtiff-src/libtiff/tif_win32.c:301:0: style: The function 'TIFFOpenW' is never used. [unusedFunction]
+TIFF *TIFFOpenW(const wchar_t *name, const char *mode)
+^
+/analysis/libtiff-src/libtiff/tif_stream.cxx:400:0: style: The function 'TIFFStreamOpen' is never used. [unusedFunction]
+TIFF *TIFFStreamOpen(const char *name, istream *is)
+^
+nofile:0:0: information: Unmatched suppression: missingIncludeSystem [unmatchedSuppression]
+
+nofile:0:0: information: Active checkers: There was critical errors (use --checkers-report=<filename> to see details) [checkersReport]
+
