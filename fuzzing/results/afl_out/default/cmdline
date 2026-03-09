@@ -1,0 +1,4 @@
+/fuzz/install/bin/tiffinfo
+-i
+-D
+@@

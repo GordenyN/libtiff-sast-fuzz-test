@@ -1,0 +1,10 @@
+# environment variables:
+AFL_AUTORESUME=0
+AFL_CUSTOM_INFO_PROGRAM=/fuzz/install/bin/tiffinfo
+AFL_CUSTOM_INFO_PROGRAM_ARGV=-i -D @@
+AFL_CUSTOM_INFO_OUT=/fuzz/output/afl_out/default
+AFL_NO_FORKSRV=1
+AFL_NO_UI=0
+AFL_SKIP_CPUFREQ=1
+# command line:
+'afl-fuzz' '-i' '/fuzz/seeds' '-o' '/fuzz/output/afl_out' '-t' '5000' '-m' 'none' '--' '/fuzz/install/bin/tiffinfo' '-i' '-D' '@@'
