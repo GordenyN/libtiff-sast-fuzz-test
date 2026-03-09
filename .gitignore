@@ -1,0 +1,19 @@
+# Игнорируемые файлы
+
+# Временные файлы Docker
+.dockerignore
+
+# Результаты фаззинга (крупные)
+fuzzing/results/afl_out/queue/
+fuzzing/results/afl_out/.synced/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Редакторы
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
